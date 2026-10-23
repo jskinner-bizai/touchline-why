@@ -1,0 +1,112 @@
+{
+  "name": "touchline-review",
+  "type": "Microsoft.App/containerApps",
+  "location": "eastus",
+  "tags": {
+    "project": "touchline-why-playtest",
+    "ownerBoundary": "personal-owner-approved-only",
+    "stage": "conditional-playtest-not-production",
+    "judgeAccessThroughUtc": "2026-11-11T07:59:00Z",
+    "reviewAfterUtc": "2026-11-11T08:00:00Z"
+  },
+  "properties": {
+    "environmentId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/review-only/providers/Microsoft.App/managedEnvironments/review-only",
+    "workloadProfileName": "Consumption",
+    "configuration": {
+      "activeRevisionsMode": "Single",
+      "ingress": {
+        "external": true,
+        "targetPort": 8080,
+        "transport": "http",
+        "allowInsecure": false,
+        "traffic": [
+          {
+            "latestRevision": true,
+            "weight": 100
+          }
+        ]
+      }
+    },
+    "template": {
+      "revisionSuffix": "review-only",
+      "terminationGracePeriodSeconds": 30,
+      "containers": [
+        {
+          "name": "touchline-playtest",
+          "image": "example.invalid/review@sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "args": [
+            "--origin",
+            "https://example.invalid"
+          ],
+          "resources": {
+            "cpu": 0.25,
+            "memory": "0.5Gi"
+          },
+          "env": [
+            {
+              "name": "PYTHONDONTWRITEBYTECODE",
+              "value": "1"
+            },
+            {
+              "name": "PYTHONUNBUFFERED",
+              "value": "1"
+            }
+          ],
+          "volumeMounts": [
+            {
+              "volumeName": "private-playtest-data",
+              "mountPath": "/data"
+            }
+          ],
+          "probes": [
+            {
+              "type": "Startup",
+              "tcpSocket": {
+                "port": 8080
+              },
+              "initialDelaySeconds": 3,
+              "periodSeconds": 5,
+              "failureThreshold": 20
+            },
+            {
+              "type": "Readiness",
+              "httpGet": {
+                "path": "/healthz",
+                "port": 8080,
+                "scheme": "HTTP",
+                "httpHeaders": [
+                  {
+                    "name": "Host",
+                    "value": "example.invalid"
+                  }
+                ]
+              },
+              "periodSeconds": 10,
+              "failureThreshold": 3
+            },
+            {
+              "type": "Liveness",
+              "tcpSocket": {
+                "port": 8080
+              },
+              "periodSeconds": 30,
+              "failureThreshold": 3
+            }
+          ]
+        }
+      ],
+      "scale": {
+        "minReplicas": 1,
+        "maxReplicas": 1,
+        "rules": []
+      },
+      "volumes": [
+        {
+          "name": "private-playtest-data",
+          "storageType": "AzureFile",
+          "storageName": "review-only"
+        }
+      ]
+    }
+  }
+}

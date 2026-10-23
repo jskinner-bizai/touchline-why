@@ -1,0 +1,60 @@
+{
+  "selectedModel": "gemma4:12b",
+  "endpoint": "http://127.0.0.1:11434",
+  "serverVersion": "0.40.5",
+  "installedReportedDigest": "6d26f29fb33332169db137f6b636ca40fb34d6c9069cb40dd7ca1df616e85791",
+  "installedDetails": {
+    "parent_model": "gemma4:12b-backup-20260929",
+    "format": "gguf",
+    "family": "gemma4",
+    "families": [
+      "gemma4"
+    ],
+    "parameter_size": "11.9B",
+    "quantization_level": "Q4_K_M",
+    "context_length": 262144,
+    "embedding_length": 3840,
+    "runner": "ggml"
+  },
+  "storedParameters": "num_gpu                        24\nnum_thread                     8\ntemperature                    1\ntop_k                          64\ntop_p                          0.95",
+  "installedLicenseDeclaration": "apache-2.0",
+  "installedLicenseSha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+  "licenseSources": [
+    "https://ai.google.dev/gemma/apache_2",
+    "https://huggingface.co/google/gemma-4-12B-it"
+  ],
+  "sdkRouteSource": "https://learn.microsoft.com/en-us/agent-framework/integrations/by-component/model-providers/ollama",
+  "qualification": "Local digest is reported by Ollama, not independently recomputed. Local custom tag differs from current public catalog manifest. No model weights redistributed. No contest eligibility claimed.",
+  "firstRealRequest": {
+    "attempts": 1,
+    "status": "timeout",
+    "elapsed_ms": 12172.0,
+    "serverCancellation": "unverified",
+    "remainingAttempts": 3,
+    "remainingWallMs": 37828
+  },
+  "currentAdapter": {
+    "selectionMode": "candidate_id",
+    "maxOutputTokens": 48,
+    "think": false,
+    "meaningfulChoiceMinimumCandidates": 2,
+    "canonicalExpansion": "explanation_type/evidence_ids copied only from engine-supplied candidate",
+    "newRealInferenceCalls": 2
+  },
+  "wholeMilestoneBudgetAfterTwoMeasurements": {
+    "attemptsUsed": 2,
+    "wallSpentMs": 24450.128,
+    "remainingAttempts": 2,
+    "remainingWallMs": 25549.872,
+    "successfulRealChoice": "not demonstrated"
+  },
+  "wholeMilestoneFinal": {
+    "attempts": 4,
+    "wallSpentMs": 38369.29,
+    "selected": 2,
+    "timeouts": 2,
+    "newMeasurementsRef": "evidence/m2-model-measurements.json",
+    "sourceSha256": "da8681560b224e7a7aaf75c9210c9521b46a1ec2d667dc343f54a86aef0fc1d1",
+    "callsExhausted": true
+  }
+}

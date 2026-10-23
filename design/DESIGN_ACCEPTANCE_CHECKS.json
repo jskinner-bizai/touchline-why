@@ -1,0 +1,48 @@
+{
+  "schema": "touchline.design-acceptance.v1",
+  "prepared_date": "2026-10-22",
+  "scope": "Isolated hosted-playtest preparation; no hosted/rendered/user-test result implied",
+  "specification": "JOURNEY_AND_DESIGN_ACCEPTANCE.md",
+  "status_meaning": "not_run means a required acceptance check, not a known failure",
+  "viewports_css_px": [
+    {"width": 320, "height": 800, "purpose": "reflow-equivalent narrow layout"},
+    {"width": 390, "height": 844, "purpose": "phone portrait"},
+    {"width": 430, "height": 932, "purpose": "larger phone portrait"},
+    {"width": 844, "height": 390, "purpose": "phone landscape"},
+    {"width": 768, "height": 1024, "purpose": "tablet portrait"},
+    {"width": 820, "height": 1180, "purpose": "larger tablet portrait"},
+    {"width": 1280, "height": 800, "purpose": "desktop"},
+    {"width": 1440, "height": 900, "purpose": "larger desktop"}
+  ],
+  "checks": [
+    {"id":"D01","priority":"P0","title":"Two-tester state and feedback isolation","method":["api","persistence","restart"],"status":"not_run","evidence":[]},
+    {"id":"D02","priority":"P0","title":"Coherent goal correction and retained shot","method":["api","rendered"],"status":"not_run","evidence":[]},
+    {"id":"D03","priority":"P0","title":"Correction persistence and selected-card non-resurrection","method":["api","real_process_restart","rendered"],"status":"not_run","evidence":[]},
+    {"id":"D04","priority":"P0","title":"Free complete judge evaluation through cutoff","method":["approved_hosted_check","capacity","delivery_fallback"],"status":"not_run","evidence":[]},
+    {"id":"D05","priority":"P0","title":"No credentials/admin/private feedback/debug exposure","method":["route_tests","public_surface_review"],"status":"not_run","evidence":[]},
+    {"id":"D06","priority":"P1","title":"Purpose/scope/next action understood at entry","method":["friend_task_observation"],"status":"not_run","evidence":[]},
+    {"id":"D07","priority":"P1","title":"One-action timed evidence and readable revision diff","method":["keyboard","pointer","rendered"],"status":"not_run","evidence":[]},
+    {"id":"D08","priority":"P1","title":"Analyst sequence, windows, revisions and denominators","method":["api","task_questions"],"status":"not_run","evidence":[]},
+    {"id":"D09","priority":"P1","title":"Phone reflow and full translation access","method":["rendered","zoom_400_percent"],"status":"not_run","evidence":[]},
+    {"id":"D10","priority":"P1","title":"Tablet and desktop retain shared order/context","method":["rendered","zoom"],"status":"not_run","evidence":[]},
+    {"id":"D11","priority":"P1","title":"Logical keyboard order and unobscured focus","method":["manual_keyboard","rendered_focus"],"status":"not_run","evidence":[]},
+    {"id":"D12","priority":"P1","title":"Meaningful screen-reader status without poll chatter","method":["actual_screen_reader"],"status":"not_run","evidence":[]},
+    {"id":"D13","priority":"P1","title":"Contrast and non-color-only status","method":["computed_colors","rendered_all_states"],"status":"not_run","evidence":[]},
+    {"id":"D14","priority":"P1","title":"44px product touch target and no hover dependency","method":["dom_measurement","phone_touch"],"status":"not_run","evidence":[]},
+    {"id":"D15","priority":"P1","title":"Truthful outage/expiry/uncertain-submit recovery","method":["real_service_interruption","idempotency","rendered"],"status":"not_run","evidence":[]},
+    {"id":"D16","priority":"P1","title":"Own-session New match versus fact-preserving rewind","method":["two_user_api","journal_inspection","rendered_confirmation"],"status":"not_run","evidence":[]},
+    {"id":"D17","priority":"P1","title":"Optional consent-aware private persistent feedback","method":["api_privacy","consent_validation","rendered","owner_export"],"status":"not_run","evidence":[]},
+    {"id":"D18","priority":"P1","title":"Cold judge completes essential guided flow","method":["cold_evaluator_task","observed_time_errors"],"status":"not_run","evidence":[]},
+    {"id":"D19","priority":"P1","title":"Truthful historical SDK and deterministic-fact claims","method":["copy_vs_receipt","recording_correspondence"],"status":"not_run","evidence":[]},
+    {"id":"D20","priority":"P2","title":"Presentation depth/language preserve factual state","method":["api_fact_equality","comprehension"],"status":"not_run","evidence":[]},
+    {"id":"D21","priority":"P2","title":"Accessible code entry and truthful expiry","method":["keyboard_paste","form_errors","session_expiry"],"status":"not_run","evidence":[]},
+    {"id":"D22","priority":"P2","title":"No unrequested autoplay or distracting auto-advance","method":["source_review","rendered_observation"],"status":"not_run","evidence":[]}
+  ],
+  "boundaries": {
+    "touch_target_44px": "Product usability target; WCAG 2.2 AA minimum is 24px or an applicable exception",
+    "time_goals": "Hypotheses for playtest measurement, not observed performance",
+    "benchmark_sources": "Official descriptions inspected; not firsthand product usability testing",
+    "production_readiness": "Not established by these design documents or local unit tests",
+    "public_deployment": "Not performed or approved by this document"
+  }
+}

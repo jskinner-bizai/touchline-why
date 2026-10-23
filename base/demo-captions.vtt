@@ -1,0 +1,69 @@
+WEBVTT
+
+NOTE DRAFT: primary eleven-beat proposal, 114 seconds. No current capture. Retime to the actual encoded export.
+
+1
+00:00:00.000 --> 00:00:06.000
+A late goal correction can leave a producer with the
+wrong line before air.
+
+2
+00:00:06.000 --> 00:00:14.000
+At fifty seconds, two shots are on target. This
+selected card replays a recorded result, with no live
+inference.
+
+3
+00:00:14.000 --> 00:00:22.000
+Reopen while the card is active. The facts return in a
+new stream; the selected card does not.
+
+4
+00:00:22.000 --> 00:00:30.000
+Replay again, then withdraw the goal. The score
+becomes zero to zero; the shot still counts.
+
+5
+00:00:30.000 --> 00:00:42.000
+Revision two removes the goal and keeps the saved
+shot. Old replay is blocked by changed facts; its shot
+count remains historically supported.
+
+6
+00:00:42.000 --> 00:00:55.000
+One Microsoft Agent Framework Agent chose an allowed
+ID in a historical local run. Code validates the
+choice and supplies the facts. This receipt is
+recorded.
+
+7
+00:00:55.000 --> 00:01:06.000
+Fan and analyst presentation modes share facts.
+English and Spanish are bounded templates, with
+readable English companion text.
+
+8
+00:01:06.000 --> 00:01:16.000
+This timeout is injected after fallback already
+exists. Its label changes while corrected facts
+remain. No model request or server cancellation is
+demonstrated.
+
+9
+00:01:16.000 --> 00:01:33.000
+Finish, rewind to fifty seconds, then finish again.
+The correction remains: zero to zero at fifty seconds
+and zero to one at the end.
+
+10
+00:01:33.000 --> 00:01:45.000
+The final score is zero to one. Both clubs completed
+two of three passes. One withdrawn goal and one
+historical selection moment remain distinct.
+
+11
+00:01:45.000 --> 00:01:54.000
+A local synthetic prototype for a proposed broadcaster
+pilot. The recorded demo needs Python and a browser,
+with no credentials or paid model service.
+

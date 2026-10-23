@@ -1,0 +1,22 @@
+# Dockerfile-specific context allowlist; Docker reads this beside deploy/Dockerfile.
+**
+!base/
+!base/**
+!web/
+!web/**
+!hosted_app.py
+!feedback_admin.py
+!deploy/
+!deploy/Dockerfile
+!deploy/Dockerfile.dockerignore
+**/__pycache__/
+**/*.pyc
+**/*.sqlite*
+**/*.db
+**/.env*
+**/*secret*
+**/*credential*
+**/tests/
+**/runtime/
+# Keep base/evidence/: vetted historical receipts are required by the recorded demo.
+# Root evidence/ remains excluded by the initial deny-all and is never reallowed.

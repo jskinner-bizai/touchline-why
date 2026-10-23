@@ -1,0 +1,64 @@
+# REFERENCE ONLY — THIS FILE IS NOT AN EXECUTABLE .ps1.
+# Nothing in this file has been run. Replace placeholders only after exact owner
+# approvals. Use a PERSONAL subscription; no employer account, credits or funds.
+
+# 1. Owner setup / read-only metadata (not performed here)
+# Owner signs in through the normal Azure flow and identifies the personal billing
+# subscription. Installation/login and any tool extensions need their own approval.
+# Once authenticated, inspect only authorized metadata and region prices:
+# az account show --query '{state:state,isDefault:isDefault}' --output json
+# az group show --name <approved-dedicated-resource-group> --output json
+# az containerapp env show --name <approved-environment> --resource-group <approved-rg>
+# Do not retrieve account keys, tokens, connection strings or secret values.
+
+# 2. Approve exact resource creation separately
+# Proposed: East US Consumption environment; one app; one bounded Azure Files share;
+# approved image registry/source; budget notifications; no custom domain or tunnel.
+# The account-specific price quote and remaining free grant must be inspected first.
+# az group create --name <approved-rg> --location eastus
+# az containerapp env create --name <approved-environment> --resource-group <approved-rg> --location eastus --mi-system-assigned
+# Provider registration / registry / storage creation / logging settings are separate
+# reviewed resource changes, not implicitly authorized by these comments.
+
+# 3. Storage identity grant and environment mount require exact scope approval
+# Current Microsoft tutorial uses managed-identity SMB preview. Evaluate preview
+# acceptance/region support and the actual role scope before choosing it. Do not
+# silently fall back to storage-key reads or broadly assign subscription roles.
+# az role assignment create --assignee-object-id <approved-environment-principal> --assignee-principal-type ServicePrincipal --role 'Storage File Data SMB MI Admin' --scope <approved-storage-account-resource-id>
+# az containerapp env storage set --name <approved-environment> --resource-group <approved-rg> --storage-name <approved-storage-link> --storage-type AzureFile --azure-file-account-name <approved-storage-account> --azure-file-share-name <approved-share> --azure-file-identity system --access-mode ReadWrite
+# Test the real mounted SQLite behavior before publication. No key is retrieved.
+
+# 4. Image build and registry push are later actions, not part of preparation
+# First run reviewed application tests and inspect the allowlist/build context.
+# A Python 3.12 Linux base must be approved/pinned; an image pull is not authorized now.
+# docker build --file deploy/Dockerfile --build-arg PYTHON_IMAGE=<approved-python-image@sha256:digest> --tag <approved-registry/image:release> .
+# docker push <approved-registry/image:release>
+# Record resulting digest. Registry permissions/public exposure are a separate grant.
+
+# 5. Render only (local preparation, no Azure action)
+# python -B deploy/render_deploy_plan.py --app-name <approved-app> --environment-resource-id <approved-resource-id> --storage-link <approved-existing-link> --image <approved-image@sha256:digest> --origin https://<approved-provider-hostname> --release <release-suffix>
+# Save rendered JSON inside deploy/ for review. Placeholders cannot be deployed.
+# ACA assigns the provider FQDN at creation; establish that hostname/origin with no
+# active grants, then verify it and configure the exact application origin. Do not
+# create grants or invite testers while origin/persistence is unresolved.
+
+# 6. Publish ONLY after final concrete approval
+# az containerapp create --name <approved-app> --resource-group <approved-rg> --environment <approved-environment> --yaml <reviewed-rendered-config>
+# For updates, require single-writer exclusion; Single revision is not a proved lock.
+# az containerapp update --name <approved-app> --resource-group <approved-rg> --yaml <reviewed-rendered-config>
+# No source, image, grant, DNS or secret changes are authorized by this preparation.
+
+# 7. Host acceptance, controlled access and private feedback
+# Complete HOSTING_PLAN.md acceptance first. Create/revoke grants with the root's
+# explicit owner CLI only after access-grant approval; do not paste them into logs.
+# The friend/judge handoff is a separate authorized message. No signup is enabled.
+# Owner authenticated control-plane operation after approval (private output):
+# az containerapp exec --name <approved-app> --resource-group <approved-rg> --command 'python -B feedback_admin.py --data-dir /data list'
+# Use supported owner export/triage commands from feedback_admin.py --help. No live
+# DB-file download or second remote SQLite writer; no public admin route.
+
+# 8. End-of-period review, not automatic destructive cleanup
+# Keep free judge access through 2026-11-11T07:59:00Z. At/after 08:00Z, review access,
+# private export and resource costs; ask for exact deprovision/purge authorization.
+# Preserve data until the approved retention/export decision. No recursive deletes
+# or resource-group deletion command is supplied or executed by this preparation.

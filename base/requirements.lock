@@ -1,0 +1,25 @@
+# Touchline Why milestone 1: CPython 3.12 / Windows AMD64 binary wheels.
+# Hashes are the exact installed wheels, from pip's PyPI install report.
+# Install: python -m pip install --require-hashes --only-binary=:all: -r requirements.lock
+# Other OS/Python wheel sets require a separately resolved and verified lock.
+--index-url https://pypi.org/simple
+
+agent-framework-core==1.22.0 --hash=sha256:df3b74962a32e81139cb4f5ead9c64d42f850a9a92145e1b569eeeb2302d6c50
+agent-framework-ollama==1.0.0b261015 --hash=sha256:87ff325b462fcd7111f4f07b132b8790aac1002d563517a208553b4c09e57c28
+annotated-types==0.8.0 --hash=sha256:f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0
+anyio==4.15.1 --hash=sha256:6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101
+certifi==2026.10.19 --hash=sha256:42d35340cc5b9ba78e818ddbff0c5b1c2b779de448a340fd1b989f5fa8670e1b
+h11==0.16.0 --hash=sha256:63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86
+httpcore==1.0.9 --hash=sha256:2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55
+httpx==0.28.1 --hash=sha256:d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad
+idna==3.20 --hash=sha256:ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c
+msgspec==0.22.0 --hash=sha256:6ad64f5c260866b0d543f89f50cee43628989c1433c5de7ce820281fa28a2611
+ollama==0.5.3 --hash=sha256:a8303b413d99a9043dbf77ebf11ced672396b59bec27e6d5db67c88f01b279d2
+opentelemetry-api==1.45.1 --hash=sha256:b31553efa588ae44bc306f863c785c5333a9ecc091248c6ee68b4b6c87fdedfb
+pydantic==2.14.1 --hash=sha256:9195d967ec791692a04438115466764fb8b9a27b31f14a760437694f40d6b454
+pydantic_core==2.50.1 --hash=sha256:132529c83901437ff642f585216831bf5fd7a91df66829907e155192ead62498
+python-dotenv==1.2.4 --hash=sha256:42269a8a5b3fd54ffa6f3d84b18abed50064717576b4ecf03dc4a55d8aa04fdc
+PyYAML==6.0.3 --hash=sha256:5fcd34e47f6e0b794d17de1b4ff496c00986e1c83f7ab2fb8fcfe9616ff7477b
+regex==2026.9.29 --hash=sha256:fdd88ed5e20b1bcdd234421e454962c971aa44b653bdb7f1ea9ef683e90fb649
+typing-inspection==0.4.4 --hash=sha256:65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147
+typing_extensions==4.16.0 --hash=sha256:481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8

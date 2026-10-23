@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "policy": "Normalize whitespace/case/terminal period; keep a draft clause only if it exactly equals a canonical safe phrase. Otherwise require manual review. Never infer contradiction or causality. Preserve any independently exact canonical clause in a mixed draft.",
+  "uses_model_response_contract": false,
+  "reason_scope": "Baseline manual-review reason is deliberately not a model semantic reason code. Do not score it as an unsafe publisher.",
+  "cases": {
+    "P01": {
+      "decision": "withhold",
+      "keep": [],
+      "drop": [
+        "C1"
+      ],
+      "facts": [],
+      "reason": "manual_review_noncanonical",
+      "semantic_assessment_performed": false,
+      "raw_draft_published": false
+    },
+    "P02": {
+      "decision": "withhold",
+      "keep": [],
+      "drop": [
+        "C1"
+      ],
+      "facts": [],
+      "reason": "manual_review_noncanonical",
+      "semantic_assessment_performed": false,
+      "raw_draft_published": false
+    },
+    "P03": {
+      "decision": "withhold",
+      "keep": [],
+      "drop": [
+        "C1",
+        "C2"
+      ],
+      "facts": [],
+      "reason": "manual_review_noncanonical",
+      "semantic_assessment_performed": false,
+      "raw_draft_published": false
+    },
+    "P04": {
+      "decision": "withhold",
+      "keep": [],
+      "drop": [
+        "C1",
+        "C2"
+      ],
+      "facts": [],
+      "reason": "manual_review_noncanonical",
+      "semantic_assessment_performed": false,
+      "raw_draft_published": false
+    }
+  }
+}

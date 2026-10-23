@@ -1,0 +1,17 @@
+# Producer copy review
+
+This candidate adds recorded clause-level advice to the existing durable desk. Start `app_advisory.py` for this workflow. It imports no provider SDK and has no live-inference opt-in. The screen identifies recorded reviews and says live review is unavailable.
+
+At the original 50-second moment, choose a sample draft and review the captured advice. Each sentence is marked to keep or remove, with evidence and the captured reason. **Approve draft wording** creates a producer-approved copy draft. It does not transmit text, replace the on-air card, calculate statistics or alter match data. No approval is inferred from a model response or its adapter-level `publishable` field.
+
+An approved correction, replay movement, view change or source revision invalidates an outstanding suggestion and draft. Approval checks the fresh context under the desk lock, including snapshot, visible revisions, source fixture, epoch, audience and language. Restart clears copy drafts and suggestions; approved match corrections remain in the original durable journal. The prototype does not claim durable copy approval or broadcast transmission.
+
+The fourth recorded case intentionally retains its model failure: it removed the obsolete score but returned `contradicted_fact` instead of the frozen expected `stale_revision`. The pilot remains **NO_GO, three of four strict cases**. When the actual ledger proves a goal was withdrawn, the application describes that correction deterministically and labels the source of that explanation. It does not rewrite the captured model output or rescore the experiment.
+
+Actual Microsoft contribution: Agent Framework core 1.22.0 and Ollama provider 1.0.0b261015 executed four local semantic reviews using cached `gemma4:12b`. The model preserved supported clauses and rejected an unsupported causal explanation in the selected cases. The safe deterministic baseline required manual review for those paraphrases. This is a small experiment, not a general accuracy estimate or measured operator benefit. `claim_review_agent.py` and `pilot_budget.py` preserve the experiment implementation; their tests inject responses and do not make new calls.
+
+Captured cases and receipts are under `evidence/claim-review/`. Evaluation labels and the unchanged original outcome are under its `evaluation/` directory and do not decide runtime approval. Exact shared-byte provenance is in its manifest. Inspecting or replaying this evidence makes no model call. The current language of the recorded advice is English; other presentation modes must not silently relabel or translate it as a fresh model result.
+
+No Azure tenant, personal subscription, deployed model, region, role assignment, quota or cost allowance has been verified in this environment. Azure CLI, the default cached profile and process project/model endpoints were absent in the latest local metadata check. Other accounts may exist elsewhere. Foundry and Azure hosting remain proposals requiring a verified personal destination and bounded access/cost decision. No employer resources were inspected.
+
+Before live review could be enabled, fix and test the process watchdog's full lifecycle ceiling, supply a separately approved compute budget, and verify model output against a moving application context with stale-response rejection. Timeout tests using injected failures do not establish real server cancellation. This candidate requests no additional provider calls or cloud spend.

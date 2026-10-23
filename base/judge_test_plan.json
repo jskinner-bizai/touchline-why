@@ -1,0 +1,25 @@
+{
+  "status": "Fixed offline advisory test plan; results supplied separately",
+  "primaryModules": [
+    "test_m3_desk",
+    "test_m3_durable",
+    "test_m3_independent",
+    "test_m3_recap",
+    "test_m3_spanish",
+    "test_final_runtime",
+    "test_advisory_review",
+    "test_advisory_app",
+    "test_review_policy",
+    "test_pilot_budget"
+  ],
+  "separateSdkModules": [
+    "mock_lifecycle_test",
+    "test_final_live",
+    "test_claim_review_agent"
+  ],
+  "nodeFiles": [
+    "test_m3_poll.cjs",
+    "test_final_ui.cjs",
+    "test_advisory_ui.cjs"
+  ]
+}

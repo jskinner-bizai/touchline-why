@@ -1,0 +1,447 @@
+{
+  "schema_version": 1,
+  "freeze_stage": "Before all pilot provider calls",
+  "facts_semantics": "Only canonical facts supporting retained draft clauses; no retained clauses means facts must be empty.",
+  "cases": {
+    "P01": {
+      "expected_response": {
+        "decision": "allow",
+        "keep": [
+          "C1"
+        ],
+        "drop": [],
+        "facts": [
+          "F_SHOTS"
+        ],
+        "reason": "supported"
+      },
+      "justified_fact_ids": [
+        "F_SHOTS"
+      ],
+      "draft_clause_ids": [
+        "C1"
+      ],
+      "context": {
+        "watermark_ms": 50000,
+        "snapshot_digest": "9a5e3e1ae7ff4afe99a81a90c7448a0ae8b6fd0f661490d1244a0042f1c06655",
+        "facts": {
+          "F_SHOTS": {
+            "text": "Harbor have had 2 shots, both on target.",
+            "evidence_ids": [
+              "e008",
+              "e010"
+            ],
+            "event_revisions": {
+              "e008": 1,
+              "e010": 1
+            }
+          },
+          "F_SCORE": {
+            "text": "Harbor Owls 1, Meadow Foxes 0 at 50 seconds.",
+            "evidence_ids": [
+              "e008",
+              "e010"
+            ],
+            "event_revisions": {
+              "e008": 1,
+              "e010": 1
+            }
+          },
+          "F_PASS": {
+            "text": "Meadow have completed 1 of 1 attempted passes.",
+            "evidence_ids": [
+              "e003"
+            ],
+            "event_revisions": {
+              "e003": 1
+            }
+          },
+          "F_ACTIVITY": {
+            "text": "Harbor recorded 3 pressure events and 1 regain.",
+            "evidence_ids": [
+              "e004",
+              "e005",
+              "e006",
+              "e007"
+            ],
+            "event_revisions": {
+              "e004": 1,
+              "e005": 1,
+              "e006": 1,
+              "e007": 1
+            }
+          }
+        },
+        "event_revisions": {
+          "meta": 1,
+          "e001": 1,
+          "e002": 1,
+          "e003": 1,
+          "e004": 1,
+          "e005": 1,
+          "e006": 1,
+          "e007": 1,
+          "e008": 1,
+          "e009": 1,
+          "e010": 1
+        },
+        "evidence_times_ms": {
+          "meta": 0,
+          "e001": 1000,
+          "e002": 2000,
+          "e003": 3000,
+          "e004": 10000,
+          "e005": 20000,
+          "e006": 30000,
+          "e007": 35000,
+          "e008": 40000,
+          "e009": 45000,
+          "e010": 50000
+        }
+      },
+      "baseline": {
+        "decision": "withhold",
+        "keep": [],
+        "drop": [
+          "C1"
+        ],
+        "facts": [],
+        "reason": "manual_review_noncanonical",
+        "semantic_assessment_performed": false,
+        "raw_draft_published": false
+      },
+      "qualification": "Frozen hand-picked semantic rubric, not a general accuracy or producer-benefit estimate."
+    },
+    "P02": {
+      "expected_response": {
+        "decision": "withhold",
+        "keep": [],
+        "drop": [
+          "C1"
+        ],
+        "facts": [],
+        "reason": "unsupported_causality"
+      },
+      "justified_fact_ids": [],
+      "draft_clause_ids": [
+        "C1"
+      ],
+      "context": {
+        "watermark_ms": 50000,
+        "snapshot_digest": "9a5e3e1ae7ff4afe99a81a90c7448a0ae8b6fd0f661490d1244a0042f1c06655",
+        "facts": {
+          "F_SHOTS": {
+            "text": "Harbor have had 2 shots, both on target.",
+            "evidence_ids": [
+              "e008",
+              "e010"
+            ],
+            "event_revisions": {
+              "e008": 1,
+              "e010": 1
+            }
+          },
+          "F_SCORE": {
+            "text": "Harbor Owls 1, Meadow Foxes 0 at 50 seconds.",
+            "evidence_ids": [
+              "e008",
+              "e010"
+            ],
+            "event_revisions": {
+              "e008": 1,
+              "e010": 1
+            }
+          },
+          "F_PASS": {
+            "text": "Meadow have completed 1 of 1 attempted passes.",
+            "evidence_ids": [
+              "e003"
+            ],
+            "event_revisions": {
+              "e003": 1
+            }
+          },
+          "F_ACTIVITY": {
+            "text": "Harbor recorded 3 pressure events and 1 regain.",
+            "evidence_ids": [
+              "e004",
+              "e005",
+              "e006",
+              "e007"
+            ],
+            "event_revisions": {
+              "e004": 1,
+              "e005": 1,
+              "e006": 1,
+              "e007": 1
+            }
+          }
+        },
+        "event_revisions": {
+          "meta": 1,
+          "e001": 1,
+          "e002": 1,
+          "e003": 1,
+          "e004": 1,
+          "e005": 1,
+          "e006": 1,
+          "e007": 1,
+          "e008": 1,
+          "e009": 1,
+          "e010": 1
+        },
+        "evidence_times_ms": {
+          "meta": 0,
+          "e001": 1000,
+          "e002": 2000,
+          "e003": 3000,
+          "e004": 10000,
+          "e005": 20000,
+          "e006": 30000,
+          "e007": 35000,
+          "e008": 40000,
+          "e009": 45000,
+          "e010": 50000
+        }
+      },
+      "baseline": {
+        "decision": "withhold",
+        "keep": [],
+        "drop": [
+          "C1"
+        ],
+        "facts": [],
+        "reason": "manual_review_noncanonical",
+        "semantic_assessment_performed": false,
+        "raw_draft_published": false
+      },
+      "qualification": "Frozen hand-picked semantic rubric, not a general accuracy or producer-benefit estimate."
+    },
+    "P03": {
+      "expected_response": {
+        "decision": "revise",
+        "keep": [
+          "C1"
+        ],
+        "drop": [
+          "C2"
+        ],
+        "facts": [
+          "F_SHOTS"
+        ],
+        "reason": "contradicted_fact"
+      },
+      "justified_fact_ids": [
+        "F_SHOTS"
+      ],
+      "draft_clause_ids": [
+        "C1",
+        "C2"
+      ],
+      "context": {
+        "watermark_ms": 50000,
+        "snapshot_digest": "9a5e3e1ae7ff4afe99a81a90c7448a0ae8b6fd0f661490d1244a0042f1c06655",
+        "facts": {
+          "F_SHOTS": {
+            "text": "Harbor have had 2 shots, both on target.",
+            "evidence_ids": [
+              "e008",
+              "e010"
+            ],
+            "event_revisions": {
+              "e008": 1,
+              "e010": 1
+            }
+          },
+          "F_SCORE": {
+            "text": "Harbor Owls 1, Meadow Foxes 0 at 50 seconds.",
+            "evidence_ids": [
+              "e008",
+              "e010"
+            ],
+            "event_revisions": {
+              "e008": 1,
+              "e010": 1
+            }
+          },
+          "F_PASS": {
+            "text": "Meadow have completed 1 of 1 attempted passes.",
+            "evidence_ids": [
+              "e003"
+            ],
+            "event_revisions": {
+              "e003": 1
+            }
+          },
+          "F_ACTIVITY": {
+            "text": "Harbor recorded 3 pressure events and 1 regain.",
+            "evidence_ids": [
+              "e004",
+              "e005",
+              "e006",
+              "e007"
+            ],
+            "event_revisions": {
+              "e004": 1,
+              "e005": 1,
+              "e006": 1,
+              "e007": 1
+            }
+          }
+        },
+        "event_revisions": {
+          "meta": 1,
+          "e001": 1,
+          "e002": 1,
+          "e003": 1,
+          "e004": 1,
+          "e005": 1,
+          "e006": 1,
+          "e007": 1,
+          "e008": 1,
+          "e009": 1,
+          "e010": 1
+        },
+        "evidence_times_ms": {
+          "meta": 0,
+          "e001": 1000,
+          "e002": 2000,
+          "e003": 3000,
+          "e004": 10000,
+          "e005": 20000,
+          "e006": 30000,
+          "e007": 35000,
+          "e008": 40000,
+          "e009": 45000,
+          "e010": 50000
+        }
+      },
+      "baseline": {
+        "decision": "withhold",
+        "keep": [],
+        "drop": [
+          "C1",
+          "C2"
+        ],
+        "facts": [],
+        "reason": "manual_review_noncanonical",
+        "semantic_assessment_performed": false,
+        "raw_draft_published": false
+      },
+      "qualification": "Frozen hand-picked semantic rubric, not a general accuracy or producer-benefit estimate."
+    },
+    "P04": {
+      "expected_response": {
+        "decision": "revise",
+        "keep": [
+          "C2"
+        ],
+        "drop": [
+          "C1"
+        ],
+        "facts": [
+          "F_SHOTS"
+        ],
+        "reason": "stale_revision"
+      },
+      "justified_fact_ids": [
+        "F_SHOTS"
+      ],
+      "draft_clause_ids": [
+        "C1",
+        "C2"
+      ],
+      "context": {
+        "watermark_ms": 50000,
+        "snapshot_digest": "3d6787279afb4392f62f19b6fb7abe3c38fbf7ccd0c090c5b99609cc32aca562",
+        "facts": {
+          "F_SHOTS": {
+            "text": "Harbor have had 2 shots, both on target.",
+            "evidence_ids": [
+              "e008",
+              "e010"
+            ],
+            "event_revisions": {
+              "e008": 1,
+              "e010": 2
+            }
+          },
+          "F_SCORE": {
+            "text": "Harbor Owls 0, Meadow Foxes 0 at 50 seconds.",
+            "evidence_ids": [
+              "e008",
+              "e010"
+            ],
+            "event_revisions": {
+              "e008": 1,
+              "e010": 2
+            }
+          },
+          "F_PASS": {
+            "text": "Meadow have completed 1 of 1 attempted passes.",
+            "evidence_ids": [
+              "e003"
+            ],
+            "event_revisions": {
+              "e003": 1
+            }
+          },
+          "F_ACTIVITY": {
+            "text": "Harbor recorded 3 pressure events and 1 regain.",
+            "evidence_ids": [
+              "e004",
+              "e005",
+              "e006",
+              "e007"
+            ],
+            "event_revisions": {
+              "e004": 1,
+              "e005": 1,
+              "e006": 1,
+              "e007": 1
+            }
+          }
+        },
+        "event_revisions": {
+          "meta": 1,
+          "e001": 1,
+          "e002": 1,
+          "e003": 1,
+          "e004": 1,
+          "e005": 1,
+          "e006": 1,
+          "e007": 1,
+          "e008": 1,
+          "e009": 1,
+          "e010": 2
+        },
+        "evidence_times_ms": {
+          "meta": 0,
+          "e001": 1000,
+          "e002": 2000,
+          "e003": 3000,
+          "e004": 10000,
+          "e005": 20000,
+          "e006": 30000,
+          "e007": 35000,
+          "e008": 40000,
+          "e009": 45000,
+          "e010": 50000
+        }
+      },
+      "baseline": {
+        "decision": "withhold",
+        "keep": [],
+        "drop": [
+          "C1",
+          "C2"
+        ],
+        "facts": [],
+        "reason": "manual_review_noncanonical",
+        "semantic_assessment_performed": false,
+        "raw_draft_published": false
+      },
+      "qualification": "Frozen hand-picked semantic rubric, not a general accuracy or producer-benefit estimate."
+    }
+  }
+}

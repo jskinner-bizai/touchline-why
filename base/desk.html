@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Touchline Why · broadcast explanation desk</title><link rel="stylesheet" href="/desk.css"><script defer src="/desk.js"></script></head>
+<body><main>
+<header><p class="eyebrow">Touchline Why · synthetic broadcast desk</p><h1>Keep the right call on air.</h1><p class="producer-job">When match data changes just before air, inspect the affected claim. Approved corrections stay with the replay.</p><p id="build-mode">Synthetic match · recorded model replay · no live inference</p><p id="suggested-path" class="helper">Suggested path: 1 Show the 50s moment. 2 Review a draft. 3 Approve wording. 4 Correct the goal.</p></header>
+<div class="hero-facts"><section class="scoreboard" aria-label="Last confirmed match facts"><span id="clock">0s</span><h2 id="score">Loading verified facts</h2><p id="score-freshness" role="status">Waiting for a confirmed producer response.</p><p id="score-last-confirmed" class="helper">No producer response confirmed yet.</p><p id="mode" role="status"></p><p id="version"></p></section><section id="correction-panel" aria-labelledby="correction-title"><h2 id="correction-title">Approved corrections</h2><p id="correction-summary" role="status">Loading visible correction history</p><ul id="correction-list"></ul><details><summary>Full visible correction records</summary><pre id="correction-raw"></pre></details></section></div>
+<h2 id="preview-title">Broadcast preview</h2><iframe id="overlay" title="Broadcast preview, independent overlay consumer" src="/overlay.html" hidden></iframe>
+<section aria-label="Embedded overlay connection"><button id="overlay-reconnect" type="button">Reconnect overlay</button> <span id="overlay-connection" role="status">Waiting for the embedded consumer to confirm the current producer.</span><p class="helper">If the card stays blank after the desk recovers, reconnect the overlay. Reload a separate overlay tab manually.</p></section>
+<section id="copy-review" class="copy-review" aria-labelledby="copy-title" hidden>
+<div class="copy-heading"><h2 id="copy-title">Review producer copy</h2><span class="copy-recorded">Recorded AI review</span></div>
+<p id="copy-mode">One Microsoft Agent Framework reviewer. Actual recorded pilot outputs; no new model call. Live review is unavailable.</p>
+<p id="copy-evaluation" class="copy-evaluation">Pilot evaluation: 3/4 strict passes. NO_GO; one recorded reason mismatch remains.</p>
+<div class="copy-start"><label for="copy-case">Recorded producer draft<select id="copy-case" aria-describedby="copy-availability" disabled></select></label><button id="copy-review-button" type="button" disabled>Review selected draft</button></div>
+<p id="copy-availability" class="helper"></p><p id="copy-status" role="status" aria-live="polite"></p>
+<div id="copy-advice" hidden><h3 id="copy-decision"></h3><p id="copy-recorded-reason"></p><p id="copy-checked-reason"></p>
+<h3>Original clauses and recommendation</h3><ol id="copy-clauses" class="copy-clauses"></ol>
+<details id="copy-facts-details"><summary>Check the supplied facts and evidence</summary><ul id="copy-facts" class="copy-facts"></ul></details>
+<details id="copy-raw-details"><summary>Inspect the recorded review receipt</summary><p>The recorded reviewer recommends clause IDs. Deterministic checks bind those clauses to the current facts. No live inference or on-air publication happens here.</p><pre id="copy-raw"></pre></details>
+</div>
+<div class="copy-actions"><button id="copy-approve" type="button" disabled>Approve draft wording</button><button id="copy-clear" type="button" disabled>Clear copy review</button></div>
+<div id="copy-approved" class="copy-approved" hidden><h3>Producer-approved draft; not transmitted</h3><p id="copy-approved-text"></p></div>
+<p class="helper copy-boundary">Approval saves only the kept original clauses as a producer draft. It does not change the broadcast preview.</p>
+</section>
+<section class="controls" aria-label="Synthetic replay controls">
+<button class="primary-action" data-action="pattern">Show 50s pattern</button><button class="primary-action correction-action" data-action="correct">Apply late correction</button><button class="primary-action" id="evidence-toggle" aria-expanded="false" aria-controls="evidence">Inspect evidence</button>
+<button id="replay-button" data-action="replay3" aria-describedby="replay-help" disabled>Replay accepted model output</button>
+<button data-action="timeout">Inject timeout → fallback</button><button data-action="recover">Reopen durable replay</button>
+<button data-action="finish">Final recap</button><button data-action="reset">Rewind replay (keep corrections)</button>
+<button id="trace-toggle" aria-expanded="false" aria-controls="sdk-details">Inspect Microsoft SDK recording</button>
+<button id="live-button" data-action="infer" hidden disabled>Run local model once</button>
+</section><p id="live-help" class="helper" hidden></p><p id="replay-help" class="helper">Show the original 50s pattern to replay its recorded model selection.</p><p class="helper">Rewind keeps approved corrections. A fresh scratch database is required to restore the original fictional fixture.</p><p id="notice" role="alert"></p>
+<section id="evidence" aria-labelledby="evidence-title" hidden><h2 id="evidence-title">Evidence at the current watermark</h2><p>Current immutable records. A late correction changes e010 to a saved shot and retracts the previous overlay.</p><div id="evidence-body"></div></section>
+<section class="views" aria-label="Presentation"><label>Audience <select id="audience"><option value="casual">Casual</option><option value="analyst">Analyst</option></select></label><label>Language <select id="language"><option value="en">English</option><option value="es">Español</option></select></label></section>
+<section id="recap" aria-labelledby="recap-title" hidden><p class="eyebrow">Final synthetic recap</p><h2 id="recap-title">Facts, corrections and recorded history</h2><p id="recap-text"></p><details id="recap-english" hidden><summary>English translation</summary><p id="recap-english-text" lang="en"></p></details><p id="recap-proof"></p></section>
+<details><summary>Durability and provenance</summary><pre id="audit"></pre></details>
+<section class="framework-evidence" aria-labelledby="sdk-title"><h2 id="sdk-title">Microsoft Agent Framework evidence</h2><p id="sdk-trace-summary">Recorded SDK traces appear at their event-time watermark. Inspecting them makes no model request.</p><details id="sdk-details"><summary>Inspect the recorded selection and SDK timeline</summary><p>The SDK Agent selected a supplied candidate ID. Deterministic code validates evidence and supplies every number and final word. Accepted recordings are historical evidence, with no demonstrated model benefit or new latency benchmark.</p><p id="sdk-replay-state"></p><div id="sdk-records"></div><details><summary>Raw accepted SDK trace data</summary><pre id="sdk-trace"></pre></details></details></section>
+<details id="live-details" hidden><summary>New local inference trace</summary><p>Separate from historical recordings. Client timeout cleanup does not prove server cancellation.</p><pre id="live-trace"></pre></details>
+<footer id="build-footer">This demo uses fictional teams and recorded model outputs. Facts, wording and recap are deterministic. The timeout is an explicit injection; real server cancellation remains unverified. No live inference runs in this build.</footer>
+</main></body></html>

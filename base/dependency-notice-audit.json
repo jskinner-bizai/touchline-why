@@ -1,0 +1,262 @@
+{
+  "reviewContext": {
+    "scope": "Historical dependency notice audit from the M2 review baseline; not a fresh final-package audit.",
+    "canonicalCoreSha256Meaning": "Historical M2 review baseline only. This is not the current application source digest.",
+    "originalAuditPreserved": "The unmodified record remains in the original milestone archive. Existing package hashes and findings below are unchanged.",
+    "finalSourceAndPackageVerification": "Recorded separately after final integration."
+  },
+  "canonicalRoot": "Exact pinned wheels and notices in this capsule; original private audit retained separately",
+  "canonicalCoreSha256": "221e2e7856e92f2c2f63f873c9fbc2a6f9017df19af48e73956808c24cedc18f",
+  "requirementsLockSha256": "83712583a2c1e13be2bcbb2419fed31ecb20cba47bee58acad3e64f60f9976f0",
+  "packages": [
+    {
+      "name": "agent-framework-core",
+      "version": "1.22.0",
+      "licenseDeclaration": "MIT (verified from shipped licence; PyPI licence fields empty)",
+      "wheelSha256": "df3b74962a32e81139cb4f5ead9c64d42f850a9a92145e1b569eeeb2302d6c50",
+      "noticeChecks": [
+        {
+          "path": "third_party/agent-framework-core-1.22.0/LICENSE",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    },
+    {
+      "name": "agent-framework-ollama",
+      "version": "1.0.0b261015",
+      "licenseDeclaration": "MIT (verified from shipped licence; PyPI licence fields empty)",
+      "wheelSha256": "87ff325b462fcd7111f4f07b132b8790aac1002d563517a208553b4c09e57c28",
+      "noticeChecks": [
+        {
+          "path": "third_party/agent-framework-ollama-1.0.0b261015/LICENSE",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "licenseDeclaration": "MIT",
+      "wheelSha256": "f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0",
+      "noticeChecks": [
+        {
+          "path": "third_party/annotated-types-0.8.0/LICENSE",
+          "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "licenseDeclaration": "MIT",
+      "wheelSha256": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101",
+      "noticeChecks": [
+        {
+          "path": "third_party/anyio-4.15.1/LICENSE",
+          "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    },
+    {
+      "name": "certifi",
+      "version": "2026.10.19",
+      "licenseDeclaration": "MPL-2.0",
+      "wheelSha256": "42d35340cc5b9ba78e818ddbff0c5b1c2b779de448a340fd1b989f5fa8670e1b",
+      "noticeChecks": [
+        {
+          "path": "third_party/certifi-2026.10.19/LICENSE",
+          "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "licenseDeclaration": "MIT",
+      "wheelSha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86",
+      "noticeChecks": [
+        {
+          "path": "third_party/h11-0.16.0/LICENSE.txt",
+          "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "licenseDeclaration": "BSD-3-Clause",
+      "wheelSha256": "2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55",
+      "noticeChecks": [
+        {
+          "path": "third_party/httpcore-1.0.9/LICENSE.md",
+          "sha256": "fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "licenseDeclaration": "BSD-3-Clause",
+      "wheelSha256": "d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad",
+      "noticeChecks": [
+        {
+          "path": "third_party/httpx-0.28.1/LICENSE.md",
+          "sha256": "4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "licenseDeclaration": "BSD-3-Clause",
+      "wheelSha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c",
+      "noticeChecks": [
+        {
+          "path": "third_party/idna-3.20/LICENSE.md",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    },
+    {
+      "name": "msgspec",
+      "version": "0.22.0",
+      "licenseDeclaration": "BSD-3-Clause",
+      "wheelSha256": "6ad64f5c260866b0d543f89f50cee43628989c1433c5de7ce820281fa28a2611",
+      "noticeChecks": [
+        {
+          "path": "third_party/msgspec-0.22.0/LICENSE",
+          "sha256": "6fde8b6723885e8508808f65ac372feb97d3eee2eab2b91d34d796b75b7ac734",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    },
+    {
+      "name": "ollama",
+      "version": "0.5.3",
+      "licenseDeclaration": "MIT",
+      "wheelSha256": "a8303b413d99a9043dbf77ebf11ced672396b59bec27e6d5db67c88f01b279d2",
+      "noticeChecks": [
+        {
+          "path": "third_party/ollama-0.5.3/LICENSE",
+          "sha256": "5934ed2ce0d15154bcdb9c85203210abac0da4314af34081e36df4599f90b226",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    },
+    {
+      "name": "opentelemetry-api",
+      "version": "1.45.1",
+      "licenseDeclaration": "Apache-2.0",
+      "wheelSha256": "b31553efa588ae44bc306f863c785c5333a9ecc091248c6ee68b4b6c87fdedfb",
+      "noticeChecks": [
+        {
+          "path": "third_party/opentelemetry-api-1.45.1/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    },
+    {
+      "name": "pydantic",
+      "version": "2.14.1",
+      "licenseDeclaration": "MIT",
+      "wheelSha256": "9195d967ec791692a04438115466764fb8b9a27b31f14a760437694f40d6b454",
+      "noticeChecks": [
+        {
+          "path": "third_party/pydantic-2.14.1/LICENSE",
+          "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.50.1",
+      "licenseDeclaration": "MIT",
+      "wheelSha256": "132529c83901437ff642f585216831bf5fd7a91df66829907e155192ead62498",
+      "noticeChecks": [
+        {
+          "path": "third_party/pydantic_core-2.50.1/LICENSE",
+          "sha256": "fbe7f615f18d135c07000e5a86325db27f42c7729699ef166ac1f7a3f4586bf4",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.2.4",
+      "licenseDeclaration": "BSD-3-Clause",
+      "wheelSha256": "42269a8a5b3fd54ffa6f3d84b18abed50064717576b4ecf03dc4a55d8aa04fdc",
+      "noticeChecks": [
+        {
+          "path": "third_party/python-dotenv-1.2.4/LICENSE",
+          "sha256": "80619b7049f08c81683ad0e01f08f257a840652dd71ee83146d36658c7d2c2b9",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "licenseDeclaration": "MIT",
+      "wheelSha256": "5fcd34e47f6e0b794d17de1b4ff496c00986e1c83f7ab2fb8fcfe9616ff7477b",
+      "noticeChecks": [
+        {
+          "path": "third_party/PyYAML-6.0.3/LICENSE",
+          "sha256": "8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    },
+    {
+      "name": "regex",
+      "version": "2026.9.29",
+      "licenseDeclaration": "Apache-2.0 AND CNRI-Python",
+      "wheelSha256": "fdd88ed5e20b1bcdd234421e454962c971aa44b653bdb7f1ea9ef683e90fb649",
+      "noticeChecks": [
+        {
+          "path": "third_party/regex-2026.9.29/LICENSE.txt",
+          "sha256": "3d220c06594b826bbabf110312f60f385f99e57e529fa4b9e536f79091f8b4c7",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "licenseDeclaration": "MIT",
+      "wheelSha256": "65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147",
+      "noticeChecks": [
+        {
+          "path": "third_party/typing-inspection-0.4.4/LICENSE",
+          "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "licenseDeclaration": "PSF-2.0",
+      "wheelSha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+      "noticeChecks": [
+        {
+          "path": "third_party/typing_extensions-4.16.0/LICENSE",
+          "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+          "canonicalEqualsWheel": true
+        }
+      ]
+    }
+  ],
+  "packageCount": 19,
+  "allNoticesMatchVerifiedWheels": true
+}

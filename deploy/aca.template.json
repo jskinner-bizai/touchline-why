@@ -1,0 +1,76 @@
+{
+  "name": "__APP_NAME__",
+  "type": "Microsoft.App/containerApps",
+  "location": "eastus",
+  "tags": {
+    "project": "touchline-why-playtest",
+    "ownerBoundary": "personal-owner-approved-only",
+    "stage": "conditional-playtest-not-production",
+    "judgeAccessThroughUtc": "2026-11-11T07:59:00Z",
+    "reviewAfterUtc": "2026-11-11T08:00:00Z"
+  },
+  "properties": {
+    "environmentId": "__APPROVED_ENVIRONMENT_RESOURCE_ID__",
+    "workloadProfileName": "Consumption",
+    "configuration": {
+      "activeRevisionsMode": "Single",
+      "ingress": {
+        "external": true,
+        "targetPort": 8080,
+        "transport": "http",
+        "allowInsecure": false,
+        "traffic": [
+          {"latestRevision": true, "weight": 100}
+        ]
+      }
+    },
+    "template": {
+      "revisionSuffix": "__RELEASE_SUFFIX__",
+      "terminationGracePeriodSeconds": 30,
+      "containers": [
+        {
+          "name": "touchline-playtest",
+          "image": "__APPROVED_IMAGE_WITH_SHA256_DIGEST__",
+          "args": ["--origin", "__APPROVED_HTTPS_ORIGIN__"],
+          "resources": {"cpu": 0.25, "memory": "0.5Gi"},
+          "env": [
+            {"name": "PYTHONDONTWRITEBYTECODE", "value": "1"},
+            {"name": "PYTHONUNBUFFERED", "value": "1"}
+          ],
+          "volumeMounts": [
+            {"volumeName": "private-playtest-data", "mountPath": "/data"}
+          ],
+          "probes": [
+            {
+              "type": "Startup",
+              "tcpSocket": {"port": 8080},
+              "initialDelaySeconds": 3,
+              "periodSeconds": 5,
+              "failureThreshold": 20
+            },
+            {
+              "type": "Readiness",
+              "httpGet": {"path": "/healthz", "port": 8080, "scheme": "HTTP", "httpHeaders": [{"name": "Host", "value": "__APPROVED_HTTPS_HOST__"}]},
+              "periodSeconds": 10,
+              "failureThreshold": 3
+            },
+            {
+              "type": "Liveness",
+              "tcpSocket": {"port": 8080},
+              "periodSeconds": 30,
+              "failureThreshold": 3
+            }
+          ]
+        }
+      ],
+      "scale": {"minReplicas": 1, "maxReplicas": 1, "rules": []},
+      "volumes": [
+        {
+          "name": "private-playtest-data",
+          "storageType": "AzureFile",
+          "storageName": "__APPROVED_ENVIRONMENT_STORAGE_LINK__"
+        }
+      ]
+    }
+  }
+}

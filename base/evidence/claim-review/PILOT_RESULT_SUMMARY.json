@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "evidence_mode": "captured actual local Agent Framework pilot; replay only, no live inference",
+  "pilot_id": "actual-run-20261022-01",
+  "original_gate": "STOPPED_NO_GO",
+  "rubric_passed": 3,
+  "rubric_total": 4,
+  "correct_clause_actions": 4,
+  "current_evidence_joins": 4,
+  "actual_call_count": 4,
+  "actual_health_gets": 2,
+  "integration_performed_during_pilot": false,
+  "owned_daemon_started": false,
+  "server_cancellation_proven": false,
+  "no_more_calls_authorized": true,
+  "cases": [
+    {
+      "caseId": "P01",
+      "receipt": "RECEIPT_P01.json",
+      "status": "reviewed",
+      "evaluation": {
+        "schema_shape_valid": true,
+        "clause_partition_valid": true,
+        "decision_consistent_with_partition": true,
+        "scores": {
+          "decision": 1,
+          "retained_clauses": 1,
+          "dropped_clauses": 1,
+          "fact_support": 1,
+          "reason": 1,
+          "current_evidence_joins": 1
+        },
+        "semantic_pass": true,
+        "evidence_join_pass": true,
+        "rubric_pass": true,
+        "evidence_joins": [
+          {
+            "fact_id": "F_SHOTS",
+            "present_in_input": true,
+            "event_time_join_valid": true,
+            "revision_join_valid": true,
+            "justified_for_retained_clause": true
+          }
+        ],
+        "baseline_comparison": {
+          "baseline_decision": "withhold",
+          "baseline_reason": "manual_review_noncanonical",
+          "baseline_publishes_unsafe_draft": false,
+          "retained_supported_clauses_above_baseline": 1,
+          "case_specific_semantic_reason_added": true,
+          "useful_diagnosis_candidate": true,
+          "human_usefulness_measured": false,
+          "qualification": "A correct frozen-case diagnosis/retention beyond generic manual review; not measured producer benefit or general model accuracy."
+        },
+        "qualification": "Current ID/revision joins do not by themselves prove semantic correctness. No model output is published by this evaluator."
+      }
+    },
+    {
+      "caseId": "P02",
+      "receipt": "RECEIPT_P02.json",
+      "status": "reviewed",
+      "evaluation": {
+        "schema_shape_valid": true,
+        "clause_partition_valid": true,
+        "decision_consistent_with_partition": true,
+        "scores": {
+          "decision": 1,
+          "retained_clauses": 1,
+          "dropped_clauses": 1,
+          "fact_support": 1,
+          "reason": 1,
+          "current_evidence_joins": 1
+        },
+        "semantic_pass": true,
+        "evidence_join_pass": true,
+        "rubric_pass": true,
+        "evidence_joins": [],
+        "baseline_comparison": {
+          "baseline_decision": "withhold",
+          "baseline_reason": "manual_review_noncanonical",
+          "baseline_publishes_unsafe_draft": false,
+          "retained_supported_clauses_above_baseline": 0,
+          "case_specific_semantic_reason_added": true,
+          "useful_diagnosis_candidate": true,
+          "human_usefulness_measured": false,
+          "qualification": "A correct frozen-case diagnosis/retention beyond generic manual review; not measured producer benefit or general model accuracy."
+        },
+        "qualification": "Current ID/revision joins do not by themselves prove semantic correctness. No model output is published by this evaluator."
+      }
+    },
+    {
+      "caseId": "P03",
+      "receipt": "RECEIPT_P03.json",
+      "status": "reviewed",
+      "evaluation": {
+        "schema_shape_valid": true,
+        "clause_partition_valid": true,
+        "decision_consistent_with_partition": true,
+        "scores": {
+          "decision": 1,
+          "retained_clauses": 1,
+          "dropped_clauses": 1,
+          "fact_support": 1,
+          "reason": 1,
+          "current_evidence_joins": 1
+        },
+        "semantic_pass": true,
+        "evidence_join_pass": true,
+        "rubric_pass": true,
+        "evidence_joins": [
+          {
+            "fact_id": "F_SHOTS",
+            "present_in_input": true,
+            "event_time_join_valid": true,
+            "revision_join_valid": true,
+            "justified_for_retained_clause": true
+          }
+        ],
+        "baseline_comparison": {
+          "baseline_decision": "withhold",
+          "baseline_reason": "manual_review_noncanonical",
+          "baseline_publishes_unsafe_draft": false,
+          "retained_supported_clauses_above_baseline": 1,
+          "case_specific_semantic_reason_added": true,
+          "useful_diagnosis_candidate": true,
+          "human_usefulness_measured": false,
+          "qualification": "A correct frozen-case diagnosis/retention beyond generic manual review; not measured producer benefit or general model accuracy."
+        },
+        "qualification": "Current ID/revision joins do not by themselves prove semantic correctness. No model output is published by this evaluator."
+      }
+    },
+    {
+      "caseId": "P04",
+      "receipt": "RECEIPT_P04.json",
+      "status": "reviewed",
+      "evaluation": {
+        "schema_shape_valid": true,
+        "clause_partition_valid": true,
+        "decision_consistent_with_partition": true,
+        "scores": {
+          "decision": 1,
+          "retained_clauses": 1,
+          "dropped_clauses": 1,
+          "fact_support": 1,
+          "reason": 0,
+          "current_evidence_joins": 1
+        },
+        "semantic_pass": false,
+        "evidence_join_pass": true,
+        "rubric_pass": false,
+        "evidence_joins": [
+          {
+            "fact_id": "F_SHOTS",
+            "present_in_input": true,
+            "event_time_join_valid": true,
+            "revision_join_valid": true,
+            "justified_for_retained_clause": true
+          }
+        ],
+        "baseline_comparison": {
+          "baseline_decision": "withhold",
+          "baseline_reason": "manual_review_noncanonical",
+          "baseline_publishes_unsafe_draft": false,
+          "retained_supported_clauses_above_baseline": 0,
+          "case_specific_semantic_reason_added": false,
+          "useful_diagnosis_candidate": false,
+          "human_usefulness_measured": false,
+          "qualification": "A correct frozen-case diagnosis/retention beyond generic manual review; not measured producer benefit or general model accuracy."
+        },
+        "qualification": "Current ID/revision joins do not by themselves prove semantic correctness. No model output is published by this evaluator."
+      }
+    }
+  ],
+  "original_result_sha256": "2321a2a7c25853248fa317c7b64acf49bd992b2940d48db78c3b53d1a2f92d8a",
+  "qualification": "Evaluation and gold labels are offline review only, never runtime authority. Four hand-picked cases do not establish general quality or measured human benefit. Original publishable fields mean adapter validation only, not approval to air."
+}

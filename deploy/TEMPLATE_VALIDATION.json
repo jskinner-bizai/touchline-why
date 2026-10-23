@@ -1,0 +1,9 @@
+{
+  "jsonSyntax": true,
+  "syntheticRender": true,
+  "singleReplica": true,
+  "readinessHostBound": true,
+  "healthScope": "metadata read only, not storage-write/recovery proof",
+  "dockerBuildExecuted": false,
+  "cloudDeploymentExecuted": false
+}

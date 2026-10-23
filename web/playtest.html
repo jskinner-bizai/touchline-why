@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Your replay — Touchline Why</title>
+  <link rel="stylesheet" href="/static/site.css">
+  <script defer src="/static/playtest.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to replay</a>
+  <header class="site-header page-width">
+    <a class="wordmark" href="/">TOUCHLINE <span>WHY</span></a>
+    <nav aria-label="Playtest navigation"><a href="#feedback">Leave feedback</a><button id="logout" class="text-button" type="button">Sign out</button></nav>
+  </header>
+  <main id="main" class="page-width app-main">
+    <header class="app-intro">
+      <p class="eyebrow">Your isolated synthetic replay</p>
+      <h1>Keep the right call on air.</h1>
+      <p>Check one football moment, correct its goal, and see what remains useful. Your changes affect only your session.</p>
+      <p class="scope">Fictional match · recorded selection · no live model calls</p>
+      <p id="session-limits" class="small">Controlled playtest access. Usage limits keep the free service bounded.</p>
+    </header>
+    <div id="global-notice" class="notice" role="alert" hidden></div>
+    <section id="primary-guide" class="primary-guide" aria-label="Guided replay next step">
+        <button id="next-action" class="primary full-width next-action" type="button" aria-describedby="next-action-help" aria-disabled="true" disabled>1 · Show the 50s moment</button>
+        <p id="next-action-help" class="small">Start here. Your replay is separate from other testers.</p>
+    </section>
+    <section class="hero-grid" aria-label="Current replay and corrections">
+      <div class="panel scoreboard" aria-labelledby="score-title">
+        <div class="row-spread"><p class="eyebrow" id="score-title">Last confirmed match facts</p><span id="clock" class="event-clock">0s</span></div>
+        <h2 id="score">Loading your replay…</h2>
+        <p id="freshness" class="connection" role="status">Connecting to your replay.</p>
+        <p id="last-confirmed" class="small">No facts confirmed yet.</p>
+        <p id="mode" class="state-pill">Waiting for the producer</p>
+
+      </div>
+      <div class="panel correction-panel" aria-labelledby="correction-title">
+        <p class="eyebrow">What changed?</p>
+        <h2 id="correction-title">Approved corrections</h2>
+        <div id="correction-summary"><p>No correction is visible yet.</p><p class="small">Try the goal correction after showing the 50-second moment.</p></div>
+      </div>
+    </section>
+    <section class="panel preview-panel" aria-labelledby="preview-title">
+      <div class="row-spread"><h2 id="preview-title">Broadcast preview</h2><span id="preview-kind" class="pill">Verified facts</span></div>
+      <p class="small">This preview shows the current publication for your replay.</p>
+      <article id="preview-content" class="broadcast-card" aria-live="polite" aria-atomic="true">
+        <p id="card-text">The verified card will appear here.</p>
+        <p id="card-translation" class="translation" lang="en" hidden></p>
+      </article>
+      <p id="fan-correction-summary" class="fan-correction-summary" lang="en" hidden></p>
+      <p id="preview-status" class="small" role="status"></p>
+    </section>
+    <section class="journey-section" aria-labelledby="journey-title">
+      <h2 id="journey-title">Follow the moment</h2>
+      <p class="small">Use the guided next step above to review, approve and correct the copy. These separate controls are optional; every model output is a historical recording.</p>
+      <div class="journey-grid">
+        <button class="journey-button" data-action="pattern" type="button"><span class="step-number">1</span><span><strong>Show the 50s moment</strong><small>See the original fictional score.</small></span></button>
+        <button class="journey-button" id="replay" data-action="replay3" aria-describedby="replay-help" type="button" disabled><span class="step-number">2</span><span><strong>Optional: replay selection</strong><small>Inspect a source-linked shot count.</small></span></button>
+        <button class="journey-button correction-action" data-action="correct" type="button"><span class="step-number">3</span><span><strong>Correct the goal</strong><small>Withdraw the goal; retain the shot.</small></span></button>
+        <button class="journey-button" id="inspect-evidence" aria-expanded="false" aria-controls="evidence-panel" type="button"><span class="step-number">4</span><span><strong>Inspect the evidence</strong><small>See the event and revision.</small></span></button>
+      </div>
+      <p id="replay-help" class="small">Show the original moment first to make its recorded selection available.</p>
+      <p id="action-status" class="small" role="status"></p>
+    </section>
+    <section id="copy-review" class="panel copy-review" aria-labelledby="copy-title" hidden>
+      <div class="row-spread"><h2 id="copy-title">Review producer copy</h2><span class="pill">Recorded AI review</span></div>
+      <p id="copy-mode" class="small">A single Microsoft Agent Framework reviewer suggested which original clauses to keep or drop in an actual recorded pilot. No new model call. Live review is unavailable.</p>
+      <p id="copy-evaluation" class="copy-evaluation">Recorded pilot: 3/4 strict passes. NO_GO; one reason mismatch remains.</p>
+      <div class="copy-start"><label for="copy-case">Try a recorded sample<select id="copy-case" aria-describedby="copy-availability" disabled></select></label><button id="copy-review-button" type="button" disabled>Review selected draft</button></div>
+      <p id="copy-availability" class="small"></p><p id="copy-status" class="small" role="status" aria-live="off"></p>
+      <div id="copy-recovery-result" class="copy-recovery-result" hidden>
+        <h3 id="copy-recovery-title">Simulated timeout: advice cleared</h3>
+        <p>There is no active advice or approved draft. Checked match facts remain available.</p>
+        <p id="copy-recovery-facts"></p>
+        <p class="small">This is an injected demonstration, not a live model timeout.</p>
+      </div>
+      <div id="copy-advice" hidden>
+        <h3 id="copy-decision"></h3><p id="copy-recorded-reason" class="small"></p><p id="copy-checked-reason"></p>
+        <p id="copy-pilot-warning" class="copy-evaluation" hidden></p>
+        <h3>Original clauses and recommendation</h3><ol id="copy-clauses" class="copy-clauses"></ol>
+        <details id="copy-facts-details"><summary>Check the supplied facts and evidence</summary><ul id="copy-facts" class="copy-facts"></ul></details>
+        <details id="copy-raw-details"><summary>Inspect the recorded review receipt</summary><p class="small">Historical reviewer output and deterministic checks are separate. Opening this receipt makes no model request.</p><pre id="copy-raw"></pre></details>
+      </div>
+      <div class="copy-actions"><button id="copy-approve" type="button" disabled>Optional: save retained wording</button><button id="copy-clear" type="button" disabled>Clear copy review</button></div>
+      <div id="copy-approved" class="copy-approved" hidden><h3 id="copy-approved-title">Producer-approved draft; not transmitted</h3><p id="copy-approved-text"></p></div>
+      <p class="small copy-boundary">Approval saves only kept original clauses in your session as a producer draft. It does not change the broadcast preview or publish wording.</p>
+    </section>
+    <section id="evidence-panel" class="panel" aria-labelledby="evidence-title" hidden>
+      <h2 id="evidence-title">Evidence behind this publication</h2>
+      <p class="small">These are fictional source events at the current replay time. A correction updates the event revision.</p>
+      <div id="evidence-list" class="evidence-list"></div>
+      <details><summary>Read the source records</summary><pre id="evidence-raw"></pre></details>
+    </section>
+    <section class="panel presentation-panel" aria-labelledby="presentation-title">
+      <div><h2 id="presentation-title">Choose the presentation</h2><p class="small">Short fan and detailed analyst views share the same verified facts. English and Spanish use fixed templates.</p></div>
+      <div class="presentation-controls">
+        <label for="audience">Audience<select id="audience"><option value="casual">Fan summary</option><option value="analyst">Analyst detail</option></select></label>
+        <label for="language">Language<select id="language"><option value="en">English</option><option value="es">Español</option></select></label>
+      </div>
+    </section>
+    <section class="panel" aria-labelledby="explore-title">
+      <h2 id="explore-title">Try the safety controls</h2>
+      <p class="small">Rewind preserves approved corrections. A new match creates a fresh fictional fixture for your session only.</p>
+      <div class="secondary-controls">
+        <button data-action="finish" type="button">Show final recap</button>
+        <button data-action="reset" type="button">Rewind · keep corrections</button>
+        <button data-action="timeout" type="button">Inject timeout · keep facts</button>
+        <button data-action="recover" type="button">Reopen saved replay</button>
+        <button id="new-match" type="button">Start a new synthetic match</button>
+      </div>
+      <p class="small">The timeout is an explicit simulation. Reopen restores committed facts and discards any selected card; it is not a process-crash demonstration.</p>
+      <div id="new-match-confirmation" class="confirmation" hidden>
+        <p><strong>Start a fresh match?</strong> This archives your current personal replay and creates a new fictional fixture. Approved corrections remain in the archived journal. Other sessions and testers are unaffected. Up to three match generations are available per session.</p>
+        <div class="button-row"><button id="new-match-confirm" class="primary" type="button">Start fresh match</button><button id="new-match-cancel" type="button">Keep current replay</button></div>
+      </div>
+    </section>
+    <section id="recap-panel" class="panel recap-panel" aria-labelledby="recap-title" hidden>
+      <p class="eyebrow">Final synthetic recap</p><h2 id="recap-title">Facts for the handoff</h2>
+      <p id="recap-text"></p>
+      <details id="recap-translation" hidden><summary>English translation</summary><p id="recap-english" lang="en"></p></details>
+      <p id="recap-proof" class="small"></p>
+    </section>
+    <section class="panel" aria-labelledby="model-title">
+      <h2 id="model-title">What did the model do?</h2>
+      <p>One Microsoft Agent Framework Agent chose an allowed insight ID in an earlier local experiment. A separate recorded reviewer suggested which producer-copy clauses to keep or drop. This playtest replays those preserved outputs. Deterministic code checks the current facts and supplies every number and broadcast sentence.</p>
+      <p class="small">The experiment does not demonstrate better selection than a rule. There is no live inference, live match feed, or tactical-causality claim.</p>
+      <details id="sdk-details"><summary>See the historical selection evidence</summary><div id="sdk-summary"></div></details>
+    </section>
+    <section id="feedback" class="panel feedback-panel" aria-labelledby="feedback-title">
+      <div class="feedback-heading"><p class="eyebrow">Optional · private</p><h2 id="feedback-title">Would this help you trust the line?</h2><p>Tell the owner what was clear, confusing, or useful. Other testers cannot read your feedback.</p></div>
+      <form id="feedback-form">
+        <fieldset><legend>Your experience</legend><div class="rating-grid">
+          <label for="rating-clarity">Clarity<select id="rating-clarity" name="clarity" required><option value="">Choose a rating</option><option value="1">1 — very unclear</option><option value="2">2 — unclear</option><option value="3">3 — mixed</option><option value="4">4 — clear</option><option value="5">5 — very clear</option></select></label>
+          <label for="rating-usefulness">Usefulness<select id="rating-usefulness" name="usefulness" required><option value="">Choose a rating</option><option value="1">1 — not useful</option><option value="2">2 — slightly useful</option><option value="3">3 — mixed</option><option value="4">4 — useful</option><option value="5">5 — very useful</option></select></label>
+          <label for="rating-trust">Trust<select id="rating-trust" name="trust" required><option value="">Choose a rating</option><option value="1">1 — very low</option><option value="2">2 — low</option><option value="3">3 — mixed</option><option value="4">4 — high</option><option value="5">5 — very high</option></select></label>
+        </div></fieldset>
+        <label for="feedback-role">Which perspective best describes you?<select id="feedback-role" name="role"><option value="prefer_not">Prefer not to say</option><option value="football_fan">Football fan</option><option value="microsoft_user">Microsoft product user</option><option value="both">Both</option></select></label>
+        <label for="feedback-comment">What should we improve? <span class="small">Optional</span><textarea id="feedback-comment" name="comment" maxlength="1000" rows="4" aria-describedby="feedback-privacy comment-count"></textarea></label>
+        <p id="comment-count" class="small">0 / 1,000 characters</p>
+        <p id="feedback-receipt" class="small" hidden></p>
+        <p id="feedback-privacy" class="small">Please do not include names, contact details, credentials, or sensitive information. Feedback is linked to a pseudonymous playtest session and device-size category. It is private to the playtest owner and its review agents. Planned retention: until 18 November 2026.</p>
+        <label class="checkbox-label" for="feedback-consent"><input id="feedback-consent" name="consent" type="checkbox" required><span>I agree to send and store this feedback under the privacy terms above. Sending feedback is optional.</span></label>
+        <button id="feedback-submit" class="primary" type="submit">Send private feedback</button>
+        <p id="feedback-status" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+      <details class="feedback-delete"><summary>Manage feedback from this session</summary><p class="small">You can delete feedback submitted from this browser session. This does not change your match replay.</p><button id="feedback-delete" type="button">Delete my session's feedback</button><div id="feedback-delete-confirmation" class="confirmation" hidden><p>Delete the feedback submitted from this session? This cannot be undone.</p><div class="button-row"><button id="feedback-delete-confirm" type="button">Yes, delete my feedback</button><button id="feedback-delete-cancel" type="button">Keep my feedback</button></div></div><p id="feedback-delete-status" class="form-status" role="status"></p></details>
+    </section>
+  </main>
+  <footer class="site-footer page-width"><p>Touchline Why · your own synthetic replay</p><p>Bounded playtest access. No live provider calls, public feedback feed, open signup, or production-readiness claim.</p></footer>
+</body>
+</html>

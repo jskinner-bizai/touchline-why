@@ -1,0 +1,42 @@
+# Local environments and generated Python files
+.venv/
+.venv-*/
+venv/
+__pycache__/
+*.py[cod]
+
+# Keep the source tree immutable; put demo state beside the extracted folder.
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+runtime/
+*-runtime/
+logs/
+*.log
+judge-results/
+verification/
+
+# Capture inputs and private coordination are not public source.
+frames/
+capture_frames/
+captures/
+screenshots/
+backups/
+.*backups*/
+*_PRIVATE.*
+*_private.*
+registration_receipt*.json
+submission_receipt*.json
+credentials.json
+secrets.json
+tokens.json
+.env
+.env.*
+
+# The companion judge release contains these exact locked wheels.
+wheelhouse/
+
+# Preserve the reviewed historical evidence/*.json receipts in public source.

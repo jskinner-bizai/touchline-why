@@ -1,0 +1,20 @@
+{
+  "frozen_review3_source_unchanged": true,
+  "source_files_checked": 79,
+  "copied_base_verification": {
+    "verifiedFiles": 78,
+    "mode": "recorded-default",
+    "bundleKind": "source",
+    "modelCalls": 0
+  },
+  "canonical_source_edits": 0,
+  "real_grants_created": 0,
+  "cloud_resources_created": 0,
+  "uploads": 0,
+  "new_model_calls": 0,
+  "rendered_browser_tested": false,
+  "actual_loopback_http_checks_passed": 26,
+  "independent_boundary_tests_passed": 26,
+  "additional_private_logging_test_passed": 1,
+  "owned_http_test_servers_stopped": true
+}

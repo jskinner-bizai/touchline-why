@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Explore a fictional football moment, inspect its evidence, and see what changes when a goal is corrected.">
+  <title>Touchline Why — football evidence playtest</title>
+  <link rel="stylesheet" href="/static/site.css">
+  <script defer src="/static/landing.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header page-width">
+    <a class="wordmark" href="/" aria-label="Touchline Why home">TOUCHLINE <span>WHY</span></a>
+    <span class="pill">Private-access playtest</span>
+  </header>
+  <main id="main" class="page-width landing-main">
+    <section class="landing-hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">For the line just before air</p>
+        <h1 id="hero-title">The goal changes.<br>The evidence stays clear.</h1>
+        <p class="lead">Explore a football studio desk that shows which claim to withdraw and which facts remain useful when match data changes.</p>
+        <p class="scope">Fictional match · recorded model selection · no live inference</p>
+        <a class="button primary" href="#access">Enter the playtest <span aria-hidden="true">→</span></a>
+        <p class="small">Free for invited testers and judges. No account signup, model setup, or payment.</p>
+      </div>
+      <aside class="example-card" aria-label="Example of the fictional correction in this playtest">
+        <p class="eyebrow">The moment to check</p>
+        <p class="example-label">Fictional example</p>
+        <div class="score-change"><span>Harbor Owls <strong>1</strong></span><span aria-hidden="true">→</span><span>Harbor Owls <strong>0</strong></span></div>
+        <h2>A goal becomes a saved shot.</h2>
+        <p>The score changes. The shot still counts. The corrected event remains available to inspect.</p>
+        <div class="fact-chips"><span>Goal withdrawn</span><span>Shot retained</span><span>Revision visible</span></div>
+        <p class="small">This is a description of the synthetic scenario, not a live match or live product state.</p>
+      </aside>
+    </section>
+    <section class="how-section" aria-labelledby="how-title">
+      <p class="eyebrow">About three minutes to explore</p>
+      <h2 id="how-title">Follow one moment. Check the change.</h2>
+      <ol class="steps">
+        <li><span>1</span><div><h3>See the moment</h3><p>Show a fictional 50-second pattern and replay a recorded selection.</p></div></li>
+        <li><span>2</span><div><h3>Correct the goal</h3><p>Watch the score change and inspect the exact source revision.</p></div></li>
+        <li><span>3</span><div><h3>Tell us what helped</h3><p>Optional private feedback asks about clarity, usefulness, and trust.</p></div></li>
+      </ol>
+    </section>
+    <section id="access" class="access-section" aria-labelledby="access-title">
+      <div>
+        <p class="eyebrow">Your own synthetic replay</p>
+        <h2 id="access-title">Have an access code?</h2>
+        <p>Use the code shared with you by the playtest owner. Your session has its own match state; another tester's corrections will not change your replay.</p>
+        <p class="small">Open signup is unavailable. Please keep your access code private.</p>
+      </div>
+      <div class="panel">
+        <div id="existing-session" hidden>
+          <h3>Your playtest session is ready.</h3>
+          <a class="button primary full-width" href="/playtest">Continue to your replay</a>
+          <p class="small">You can sign out from the desk.</p>
+        </div>
+        <form id="access-form" aria-describedby="access-help" novalidate>
+          <label for="access-code">Access code</label>
+          <input id="access-code" name="code" type="password" autocomplete="current-password" autocapitalize="none" spellcheck="false" minlength="32" maxlength="128" pattern="[A-Za-z0-9_-]{32,128}" required aria-describedby="access-help access-status">
+          <p id="access-help" class="small">No name or email address is needed.</p>
+          <button id="access-submit" class="primary full-width" type="submit">Open my replay</button>
+        </form>
+        <p id="access-status" class="form-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+    <section class="limits-section" aria-labelledby="limits-title">
+      <h2 id="limits-title">A focused prototype, with clear limits.</h2>
+      <div class="limits-grid">
+        <p><strong>What runs here.</strong> Synthetic events, verified arithmetic, correction history, short fan and analyst views, and fixed English and Spanish templates.</p>
+        <p><strong>What the model did.</strong> One Microsoft Agent Framework Agent selected an allowed insight ID in a historical local experiment. This playtest replays its preserved selection. Code supplies facts and wording.</p>
+        <p><strong>What this does not establish.</strong> Live football coverage, tactical causality, unrestricted translation, model advantage, or production readiness. Usage is limited to keep the free playtest bounded.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer page-width"><p>Touchline Why · fictional football evidence playtest</p><p>No advertising, public feedback feed, or signup form. Optional feedback is private to the playtest owner and its review agents.</p></footer>
+</body>
+</html>

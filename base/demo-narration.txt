@@ -1,0 +1,34 @@
+DRAFT narration for the single primary proposed 114-second recording. No current capture or transcript exists. Retime to actual footage and remove unsupported claims.
+
+[0:00 to 0:06]
+A late goal correction can leave a producer with the wrong line before air.
+
+[0:06 to 0:14]
+At fifty seconds, two shots are on target. This selected card replays a recorded result, with no live inference.
+
+[0:14 to 0:22]
+Reopen while the card is active. The facts return in a new stream; the selected card does not.
+
+[0:22 to 0:30]
+Replay again, then withdraw the goal. The score becomes zero to zero; the shot still counts.
+
+[0:30 to 0:42]
+Revision two removes the goal and keeps the saved shot. Old replay is blocked by changed facts; its shot count remains historically supported.
+
+[0:42 to 0:55]
+One Microsoft Agent Framework Agent chose an allowed ID in a historical local run. Code validates the choice and supplies the facts. This receipt is recorded.
+
+[0:55 to 1:06]
+Fan and analyst presentation modes share facts. English and Spanish are bounded templates, with readable English companion text.
+
+[1:06 to 1:16]
+This timeout is injected after fallback already exists. Its label changes while corrected facts remain. No model request or server cancellation is demonstrated.
+
+[1:16 to 1:33]
+Finish, rewind to fifty seconds, then finish again. The correction remains: zero to zero at fifty seconds and zero to one at the end.
+
+[1:33 to 1:45]
+The final score is zero to one. Both clubs completed two of three passes. One withdrawn goal and one historical selection moment remain distinct.
+
+[1:45 to 1:54]
+A local synthetic prototype for a proposed broadcaster pilot. The recorded demo needs Python and a browser, with no credentials or paid model service.

@@ -1,0 +1,283 @@
+{
+  "scope": "Four explicit real local SDK agent calls; no injected cases included",
+  "calls": 4,
+  "successfulSelections": 2,
+  "timeouts": 2,
+  "wallSpentMs": 38369.29,
+  "budget": {
+    "maxCalls": 4,
+    "maxWallMs": 50000,
+    "clientTimeoutMs": 12000,
+    "cleanupBudgetMs": 250,
+    "automaticRetries": 0
+  },
+  "cases": [
+    {
+      "attempt": 1,
+      "receipt": "m2-first-real-selection.json",
+      "receiptSha256": "018781e2151e0336e75e4a817119381a5cedbb81c1c10812349367d23b5337d9",
+      "status": "timeout",
+      "elapsed_ms": 12172.0,
+      "selection": null,
+      "mode": "full_selection",
+      "thinkRequested": null,
+      "server": null,
+      "cleanup": {
+        "client_closed": true,
+        "transport_closed": true,
+        "server_cancellation": "not measured; no cancellation claim",
+        "response_closed": null,
+        "transport_task_cancelled": true
+      },
+      "requestsDispatched": 1,
+      "sdkVersions": {
+        "agent-framework-core": "1.22.0",
+        "agent-framework-ollama": "1.0.0b261015",
+        "ollama": "0.5.3"
+      },
+      "trace": [
+        {
+          "source": "Agent Framework agent middleware",
+          "event": "enter",
+          "agent_id": "touchline_candidate_selector",
+          "agent_class": "Agent"
+        },
+        {
+          "source": "Agent Framework chat middleware",
+          "event": "enter",
+          "client_class": "OllamaChatClient",
+          "stream": false
+        },
+        {
+          "source": "httpx transport",
+          "event": "request_dispatched",
+          "path": "/api/chat",
+          "request_sha256": "fc3ae532b84dcd62ff17323f6ecda3a07b1463150c74d69c87768f4b5c85a780"
+        },
+        {
+          "source": "httpx transport",
+          "event": "client_task_cancelled"
+        },
+        {
+          "source": "Agent Framework chat middleware",
+          "event": "failed",
+          "error_type": "CancelledError"
+        },
+        {
+          "source": "Agent Framework agent middleware",
+          "event": "failed",
+          "error_type": "CancelledError"
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "receipt": "m2-second-ui-call.json",
+      "receiptSha256": "7b61e6c9eb9f43323c472a12491dc3692ad1ee07cecb66b947408caef185832a",
+      "status": "timeout",
+      "elapsed_ms": 12278.128,
+      "selection": null,
+      "mode": "full_selection",
+      "thinkRequested": null,
+      "server": null,
+      "cleanup": {
+        "client_closed": true,
+        "transport_closed": true,
+        "server_cancellation": "not measured; no cancellation claim",
+        "response_closed": null,
+        "transport_task_cancelled": true
+      },
+      "requestsDispatched": 1,
+      "sdkVersions": {
+        "agent-framework-core": "1.22.0",
+        "agent-framework-ollama": "1.0.0b261015",
+        "ollama": "0.5.3"
+      },
+      "trace": [
+        {
+          "source": "Agent Framework agent middleware",
+          "event": "enter",
+          "agent_id": "touchline_candidate_selector",
+          "agent_class": "Agent"
+        },
+        {
+          "source": "Agent Framework chat middleware",
+          "event": "enter",
+          "client_class": "OllamaChatClient",
+          "stream": false
+        },
+        {
+          "source": "httpx transport",
+          "event": "request_dispatched",
+          "path": "/api/chat",
+          "request_sha256": "a9dc7799bd0f6e0b7d1024394e871ac24cb7233cde56d0847781ddcf2c95fd9d"
+        },
+        {
+          "source": "httpx transport",
+          "event": "client_task_cancelled"
+        },
+        {
+          "source": "Agent Framework chat middleware",
+          "event": "failed",
+          "error_type": "CancelledError"
+        },
+        {
+          "source": "Agent Framework agent middleware",
+          "event": "failed",
+          "error_type": "CancelledError"
+        }
+      ]
+    },
+    {
+      "attempt": 3,
+      "receipt": "m2-third-ui-call.json",
+      "receiptSha256": "8c54aebccd6163337de8c703ab8d22c26b471db67f66a876044409469bddb5ab",
+      "status": "selected",
+      "elapsed_ms": 10298.841,
+      "selection": {
+        "candidate_id": "candidate_1c324d2700f64f848df0",
+        "evidence_ids": [
+          "e008",
+          "e010"
+        ],
+        "explanation_type": "shot_volume"
+      },
+      "mode": "candidate_id",
+      "thinkRequested": false,
+      "server": {
+        "model": "gemma4:12b",
+        "done": true,
+        "done_reason": "stop",
+        "prompt_eval_count": 187,
+        "eval_count": 29,
+        "total_duration": 10083336700,
+        "load_duration": 6482588500
+      },
+      "cleanup": {
+        "client_closed": true,
+        "transport_closed": true,
+        "server_cancellation": "not measured; no cancellation claim",
+        "response_closed": true,
+        "transport_task_cancelled": false
+      },
+      "requestsDispatched": 1,
+      "sdkVersions": {
+        "agent-framework-core": "1.22.0",
+        "agent-framework-ollama": "1.0.0b261015",
+        "ollama": "0.5.3"
+      },
+      "trace": [
+        {
+          "source": "Agent Framework agent middleware",
+          "event": "enter",
+          "agent_id": "touchline_candidate_selector",
+          "agent_class": "Agent"
+        },
+        {
+          "source": "Agent Framework chat middleware",
+          "event": "enter",
+          "client_class": "OllamaChatClient",
+          "stream": false
+        },
+        {
+          "source": "httpx transport",
+          "event": "request_dispatched",
+          "path": "/api/chat",
+          "request_sha256": "6d838addb4c8b35ef83331175bcc319eba369270c3c52007dd18518e7138e322"
+        },
+        {
+          "source": "httpx transport",
+          "event": "response_received",
+          "http_status": 200,
+          "bytes": 382
+        },
+        {
+          "source": "Agent Framework chat middleware",
+          "event": "completed",
+          "response_class": "ChatResponse"
+        },
+        {
+          "source": "Agent Framework agent middleware",
+          "event": "completed",
+          "response_class": "AgentResponse"
+        }
+      ]
+    },
+    {
+      "attempt": 4,
+      "receipt": "m2-fourth-ui-call.json",
+      "receiptSha256": "3b9f35f008c51b2ef0fbe7d9fac5a2392c2182b8f36c4f648e6b7a1734a888aa",
+      "status": "selected",
+      "elapsed_ms": 3620.321,
+      "selection": {
+        "candidate_id": "candidate_1c324d2700f64f848df0",
+        "evidence_ids": [
+          "e008",
+          "e010"
+        ],
+        "explanation_type": "shot_volume"
+      },
+      "mode": "candidate_id",
+      "thinkRequested": false,
+      "server": {
+        "model": "gemma4:12b",
+        "done": true,
+        "done_reason": "stop",
+        "prompt_eval_count": 187,
+        "eval_count": 29,
+        "total_duration": 3438149700,
+        "load_duration": 8505100
+      },
+      "cleanup": {
+        "client_closed": true,
+        "transport_closed": true,
+        "server_cancellation": "not measured; no cancellation claim",
+        "response_closed": true,
+        "transport_task_cancelled": false
+      },
+      "requestsDispatched": 1,
+      "sdkVersions": {
+        "agent-framework-core": "1.22.0",
+        "agent-framework-ollama": "1.0.0b261015",
+        "ollama": "0.5.3"
+      },
+      "trace": [
+        {
+          "source": "Agent Framework agent middleware",
+          "event": "enter",
+          "agent_id": "touchline_candidate_selector",
+          "agent_class": "Agent"
+        },
+        {
+          "source": "Agent Framework chat middleware",
+          "event": "enter",
+          "client_class": "OllamaChatClient",
+          "stream": false
+        },
+        {
+          "source": "httpx transport",
+          "event": "request_dispatched",
+          "path": "/api/chat",
+          "request_sha256": "6d838addb4c8b35ef83331175bcc319eba369270c3c52007dd18518e7138e322"
+        },
+        {
+          "source": "httpx transport",
+          "event": "response_received",
+          "http_status": 200,
+          "bytes": 380
+        },
+        {
+          "source": "Agent Framework chat middleware",
+          "event": "completed",
+          "response_class": "ChatResponse"
+        },
+        {
+          "source": "Agent Framework agent middleware",
+          "event": "completed",
+          "response_class": "AgentResponse"
+        }
+      ]
+    }
+  ],
+  "qualification": "Last two cases changed both output contract and thinking control; load conditions also differed. This is not a causal ablation or a model latency distribution. Earlier server-side cancellation remains unverified."
+}

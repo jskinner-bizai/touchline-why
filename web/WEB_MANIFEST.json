@@ -1,0 +1,44 @@
+{
+  "scope": "Revision3 guided synthetic playtest review fixes",
+  "createdAtUtc": "2026-10-22T18:39:55.785701+00:00",
+  "canonicalSourceEdited": false,
+  "renderedBrowserTested": false,
+  "files": [
+    {
+      "path": "landing.html",
+      "bytes": 5531,
+      "sha256": "033053af63a479c047ea79b1e525a59eb62510223ffd78e58c35b5ba2936bdef"
+    },
+    {
+      "path": "landing.js",
+      "bytes": 2228,
+      "sha256": "5ffb6608d2bacd47a6d061cc1ad1de71c38da8253549fcbd93c669e7703dc473"
+    },
+    {
+      "path": "playtest.html",
+      "bytes": 15299,
+      "sha256": "56d9c94c537c721b5ae4886d84afe6500f46744d6bd0a08f00afb52e2c7937a9"
+    },
+    {
+      "path": "playtest.js",
+      "bytes": 45922,
+      "sha256": "2ddce38d8abbef10fa28895312ae61c436648df7c476124d21507d800459fd07"
+    },
+    {
+      "path": "site.css",
+      "bytes": 17471,
+      "sha256": "3a7b32ac7f07b8e539ff0a6eff642e434c1afff8c2ea3b85b0c256cd46a2e32d"
+    },
+    {
+      "path": "test_advisory_hosted_ui.cjs",
+      "bytes": 36616,
+      "sha256": "9210e70cfeca8c73eac3cd604c0096450ee07b1cf66018ce80a054c163f1721c"
+    },
+    {
+      "path": "WEB_HANDOFF.md",
+      "bytes": 4779,
+      "sha256": "edffdf8f8d5f500ae7f08bbcc9b8d6071dc58cafbedf06e0da69ebe0f3752177"
+    }
+  ],
+  "predecessorSourceManifestSha256": "dc00902b5b26ad53a6dc4bc70c37b9f1d511e6f1254b9e57d665f5d9a1e0c392"
+}

@@ -1,0 +1,1140 @@
+{
+  "publication": {
+    "schema_version": "touchline.overlay.v1",
+    "stream_id": "0deb8a49d89241e3bb2a0a66b76916fe",
+    "sequence": 4,
+    "overlay_id": "overlay_8e28fcdc3d8242b4bf6edaa5b7574123_4-1",
+    "fact_id": "fact_9a5e3e1ae7ff4afe99a81a90c7448a0ae8b6fd0f661490d1244a0042f1c06655",
+    "state_digest": "9a5e3e1ae7ff4afe99a81a90c7448a0ae8b6fd0f661490d1244a0042f1c06655",
+    "issued_at_ms": 1792510503618,
+    "expires_at_ms": 1792510523618,
+    "event_time": {
+      "through_ms": 50000,
+      "start_ms": 0,
+      "end_ms": 50000,
+      "inclusive": true
+    },
+    "retracts": [
+      "overlay_8e28fcdc3d8242b4bf6edaa5b7574123_3-1"
+    ],
+    "card": {
+      "text": "Verified fact card: Harbor Owls 1, Meadow Foxes 0. Synthetic replay; no model explanation accepted.",
+      "audience": "casual",
+      "language": "en",
+      "fallback": true,
+      "reason": "expired",
+      "candidate_id": null,
+      "explanation_type": "verified_score",
+      "evidence_ids": [
+        "meta",
+        "e001",
+        "e002",
+        "e003",
+        "e004",
+        "e005",
+        "e006",
+        "e007",
+        "e008",
+        "e009",
+        "e010"
+      ],
+      "metrics": {
+        "harbor": {
+          "pass_attempts": 2,
+          "passes_completed": 1,
+          "shots": 2,
+          "on_target": 2,
+          "goals": 1,
+          "tackles": 0,
+          "turnovers": 0,
+          "regains": 1,
+          "pressure": 3,
+          "pass_accuracy": {
+            "numerator": 1,
+            "denominator": 2
+          },
+          "shot_accuracy": {
+            "numerator": 2,
+            "denominator": 2
+          }
+        },
+        "meadow": {
+          "pass_attempts": 1,
+          "passes_completed": 1,
+          "shots": 0,
+          "on_target": 0,
+          "goals": 0,
+          "tackles": 1,
+          "turnovers": 1,
+          "regains": 0,
+          "pressure": 0,
+          "pass_accuracy": {
+            "numerator": 1,
+            "denominator": 1
+          },
+          "shot_accuracy": null
+        }
+      },
+      "window_metrics": {
+        "harbor": {
+          "pass_attempts": 2,
+          "passes_completed": 1,
+          "shots": 2,
+          "on_target": 2,
+          "goals": 1,
+          "tackles": 0,
+          "turnovers": 0,
+          "regains": 1,
+          "pressure": 3,
+          "pass_accuracy": {
+            "numerator": 1,
+            "denominator": 2
+          },
+          "shot_accuracy": {
+            "numerator": 2,
+            "denominator": 2
+          }
+        },
+        "meadow": {
+          "pass_attempts": 1,
+          "passes_completed": 1,
+          "shots": 0,
+          "on_target": 0,
+          "goals": 0,
+          "tackles": 1,
+          "turnovers": 1,
+          "regains": 0,
+          "pressure": 0,
+          "pass_accuracy": {
+            "numerator": 1,
+            "denominator": 1
+          },
+          "shot_accuracy": null
+        }
+      },
+      "window_start_ms": 0,
+      "window_end_ms": 50000,
+      "upto_ms": 50000,
+      "state_digest": "9a5e3e1ae7ff4afe99a81a90c7448a0ae8b6fd0f661490d1244a0042f1c06655",
+      "window_ms": 60000,
+      "qualification": "Synthetic data; deterministic templates. Spanish wording needs final language review."
+    },
+    "facts": {
+      "score": {
+        "Harbor Owls": 1,
+        "Meadow Foxes": 0
+      },
+      "through_ms": 50000
+    },
+    "provenance": {
+      "synthetic": true,
+      "source_id": "synthetic_match",
+      "evidence_ids": [
+        "meta",
+        "e001",
+        "e002",
+        "e003",
+        "e004",
+        "e005",
+        "e006",
+        "e007",
+        "e008",
+        "e009",
+        "e010"
+      ],
+      "evidence_records": [
+        {
+          "id": "meta",
+          "type": "metadata",
+          "at_ms": 0,
+          "match_id": "fictional_match_01",
+          "teams": [
+            {
+              "id": "harbor",
+              "name": "Harbor Owls"
+            },
+            {
+              "id": "meadow",
+              "name": "Meadow Foxes"
+            }
+          ],
+          "players": [
+            {
+              "id": "harbor_7",
+              "name": "Ari Vale",
+              "team_id": "harbor"
+            },
+            {
+              "id": "harbor_9",
+              "name": "Mika Reed",
+              "team_id": "harbor"
+            },
+            {
+              "id": "meadow_4",
+              "name": "Noa Ash",
+              "team_id": "meadow"
+            },
+            {
+              "id": "meadow_8",
+              "name": "Eli Moss",
+              "team_id": "meadow"
+            }
+          ]
+        },
+        {
+          "id": "e001",
+          "type": "pass",
+          "at_ms": 1000,
+          "team_id": "harbor",
+          "player_id": "harbor_7",
+          "success": true
+        },
+        {
+          "id": "e002",
+          "type": "pass",
+          "at_ms": 2000,
+          "team_id": "harbor",
+          "player_id": "harbor_9",
+          "success": false
+        },
+        {
+          "id": "e003",
+          "type": "pass",
+          "at_ms": 3000,
+          "team_id": "meadow",
+          "player_id": "meadow_4",
+          "success": true
+        },
+        {
+          "id": "e004",
+          "type": "pressure",
+          "at_ms": 10000,
+          "team_id": "harbor",
+          "player_id": "harbor_7"
+        },
+        {
+          "id": "e005",
+          "type": "pressure",
+          "at_ms": 20000,
+          "team_id": "harbor",
+          "player_id": "harbor_9"
+        },
+        {
+          "id": "e006",
+          "type": "pressure",
+          "at_ms": 30000,
+          "team_id": "harbor",
+          "player_id": "harbor_7"
+        },
+        {
+          "id": "e007",
+          "type": "turnover",
+          "at_ms": 35000,
+          "team_id": "meadow",
+          "player_id": "meadow_4",
+          "gained_by_team_id": "harbor",
+          "gained_by_player_id": "harbor_9"
+        },
+        {
+          "id": "e008",
+          "type": "shot",
+          "at_ms": 40000,
+          "team_id": "harbor",
+          "player_id": "harbor_9",
+          "on_target": true,
+          "goal": false
+        },
+        {
+          "id": "e009",
+          "type": "tackle",
+          "at_ms": 45000,
+          "team_id": "meadow",
+          "player_id": "meadow_8"
+        },
+        {
+          "id": "e010",
+          "type": "shot",
+          "at_ms": 50000,
+          "team_id": "harbor",
+          "player_id": "harbor_7",
+          "on_target": true,
+          "goal": true
+        }
+      ],
+      "event_revisions": {
+        "meta": 1,
+        "e001": 1,
+        "e002": 1,
+        "e003": 1,
+        "e004": 1,
+        "e005": 1,
+        "e006": 1,
+        "e007": 1,
+        "e008": 1,
+        "e009": 1,
+        "e010": 1
+      },
+      "engine_overlay_id": "overlay_8e28fcdc3d8242b4bf6edaa5b7574123_4",
+      "engine_schema_version": "touchline.overlay.v2"
+    }
+  },
+  "envelope": {
+    "schema_version": "touchline.overlay.v2",
+    "engine_epoch": "8e28fcdc3d8242b4bf6edaa5b7574123",
+    "overlay_version": 4,
+    "overlay_id": "overlay_8e28fcdc3d8242b4bf6edaa5b7574123_4",
+    "fact_id": "fact_9a5e3e1ae7ff4afe99a81a90c7448a0ae8b6fd0f661490d1244a0042f1c06655",
+    "state_digest": "9a5e3e1ae7ff4afe99a81a90c7448a0ae8b6fd0f661490d1244a0042f1c06655",
+    "issued_at_ms": 1792510503618,
+    "expires_at_ms": 1792510523618,
+    "server_time_ms": 1792510505725,
+    "through_ms": 50000,
+    "window": {
+      "start_ms": 0,
+      "end_ms": 50000,
+      "inclusive": true
+    },
+    "reason": "expired",
+    "status": "fallback",
+    "retracted_overlay_ids": [
+      "overlay_8e28fcdc3d8242b4bf6edaa5b7574123_3"
+    ],
+    "card": {
+      "text": "Verified fact card: Harbor Owls 1, Meadow Foxes 0. Synthetic replay; no model explanation accepted.",
+      "audience": "casual",
+      "language": "en",
+      "fallback": true,
+      "reason": "expired",
+      "candidate_id": null,
+      "explanation_type": "verified_score",
+      "evidence_ids": [
+        "meta",
+        "e001",
+        "e002",
+        "e003",
+        "e004",
+        "e005",
+        "e006",
+        "e007",
+        "e008",
+        "e009",
+        "e010"
+      ],
+      "metrics": {
+        "harbor": {
+          "pass_attempts": 2,
+          "passes_completed": 1,
+          "shots": 2,
+          "on_target": 2,
+          "goals": 1,
+          "tackles": 0,
+          "turnovers": 0,
+          "regains": 1,
+          "pressure": 3,
+          "pass_accuracy": {
+            "numerator": 1,
+            "denominator": 2
+          },
+          "shot_accuracy": {
+            "numerator": 2,
+            "denominator": 2
+          }
+        },
+        "meadow": {
+          "pass_attempts": 1,
+          "passes_completed": 1,
+          "shots": 0,
+          "on_target": 0,
+          "goals": 0,
+          "tackles": 1,
+          "turnovers": 1,
+          "regains": 0,
+          "pressure": 0,
+          "pass_accuracy": {
+            "numerator": 1,
+            "denominator": 1
+          },
+          "shot_accuracy": null
+        }
+      },
+      "window_metrics": {
+        "harbor": {
+          "pass_attempts": 2,
+          "passes_completed": 1,
+          "shots": 2,
+          "on_target": 2,
+          "goals": 1,
+          "tackles": 0,
+          "turnovers": 0,
+          "regains": 1,
+          "pressure": 3,
+          "pass_accuracy": {
+            "numerator": 1,
+            "denominator": 2
+          },
+          "shot_accuracy": {
+            "numerator": 2,
+            "denominator": 2
+          }
+        },
+        "meadow": {
+          "pass_attempts": 1,
+          "passes_completed": 1,
+          "shots": 0,
+          "on_target": 0,
+          "goals": 0,
+          "tackles": 1,
+          "turnovers": 1,
+          "regains": 0,
+          "pressure": 0,
+          "pass_accuracy": {
+            "numerator": 1,
+            "denominator": 1
+          },
+          "shot_accuracy": null
+        }
+      },
+      "window_start_ms": 0,
+      "window_end_ms": 50000,
+      "upto_ms": 50000,
+      "state_digest": "9a5e3e1ae7ff4afe99a81a90c7448a0ae8b6fd0f661490d1244a0042f1c06655",
+      "window_ms": 60000,
+      "qualification": "Synthetic data; deterministic templates. Spanish wording needs final language review."
+    },
+    "snapshot": {
+      "match": {
+        "id": "meta",
+        "type": "metadata",
+        "at_ms": 0,
+        "match_id": "fictional_match_01",
+        "teams": [
+          {
+            "id": "harbor",
+            "name": "Harbor Owls"
+          },
+          {
+            "id": "meadow",
+            "name": "Meadow Foxes"
+          }
+        ],
+        "players": [
+          {
+            "id": "harbor_7",
+            "name": "Ari Vale",
+            "team_id": "harbor"
+          },
+          {
+            "id": "harbor_9",
+            "name": "Mika Reed",
+            "team_id": "harbor"
+          },
+          {
+            "id": "meadow_4",
+            "name": "Noa Ash",
+            "team_id": "meadow"
+          },
+          {
+            "id": "meadow_8",
+            "name": "Eli Moss",
+            "team_id": "meadow"
+          }
+        ]
+      },
+      "upto_ms": 50000,
+      "window_ms": 60000,
+      "event_ids": [
+        "meta",
+        "e001",
+        "e002",
+        "e003",
+        "e004",
+        "e005",
+        "e006",
+        "e007",
+        "e008",
+        "e009",
+        "e010"
+      ],
+      "window_event_ids": [
+        "e001",
+        "e002",
+        "e003",
+        "e004",
+        "e005",
+        "e006",
+        "e007",
+        "e008",
+        "e009",
+        "e010"
+      ],
+      "events": [
+        {
+          "id": "meta",
+          "type": "metadata",
+          "at_ms": 0,
+          "match_id": "fictional_match_01",
+          "teams": [
+            {
+              "id": "harbor",
+              "name": "Harbor Owls"
+            },
+            {
+              "id": "meadow",
+              "name": "Meadow Foxes"
+            }
+          ],
+          "players": [
+            {
+              "id": "harbor_7",
+              "name": "Ari Vale",
+              "team_id": "harbor"
+            },
+            {
+              "id": "harbor_9",
+              "name": "Mika Reed",
+              "team_id": "harbor"
+            },
+            {
+              "id": "meadow_4",
+              "name": "Noa Ash",
+              "team_id": "meadow"
+            },
+            {
+              "id": "meadow_8",
+              "name": "Eli Moss",
+              "team_id": "meadow"
+            }
+          ]
+        },
+        {
+          "id": "e001",
+          "type": "pass",
+          "at_ms": 1000,
+          "team_id": "harbor",
+          "player_id": "harbor_7",
+          "success": true
+        },
+        {
+          "id": "e002",
+          "type": "pass",
+          "at_ms": 2000,
+          "team_id": "harbor",
+          "player_id": "harbor_9",
+          "success": false
+        },
+        {
+          "id": "e003",
+          "type": "pass",
+          "at_ms": 3000,
+          "team_id": "meadow",
+          "player_id": "meadow_4",
+          "success": true
+        },
+        {
+          "id": "e004",
+          "type": "pressure",
+          "at_ms": 10000,
+          "team_id": "harbor",
+          "player_id": "harbor_7"
+        },
+        {
+          "id": "e005",
+          "type": "pressure",
+          "at_ms": 20000,
+          "team_id": "harbor",
+          "player_id": "harbor_9"
+        },
+        {
+          "id": "e006",
+          "type": "pressure",
+          "at_ms": 30000,
+          "team_id": "harbor",
+          "player_id": "harbor_7"
+        },
+        {
+          "id": "e007",
+          "type": "turnover",
+          "at_ms": 35000,
+          "team_id": "meadow",
+          "player_id": "meadow_4",
+          "gained_by_team_id": "harbor",
+          "gained_by_player_id": "harbor_9"
+        },
+        {
+          "id": "e008",
+          "type": "shot",
+          "at_ms": 40000,
+          "team_id": "harbor",
+          "player_id": "harbor_9",
+          "on_target": true,
+          "goal": false
+        },
+        {
+          "id": "e009",
+          "type": "tackle",
+          "at_ms": 45000,
+          "team_id": "meadow",
+          "player_id": "meadow_8"
+        },
+        {
+          "id": "e010",
+          "type": "shot",
+          "at_ms": 50000,
+          "team_id": "harbor",
+          "player_id": "harbor_7",
+          "on_target": true,
+          "goal": true
+        }
+      ],
+      "stats": {
+        "total": {
+          "teams": {
+            "harbor": {
+              "pass_attempts": 2,
+              "passes_completed": 1,
+              "shots": 2,
+              "on_target": 2,
+              "goals": 1,
+              "tackles": 0,
+              "turnovers": 0,
+              "regains": 1,
+              "pressure": 3,
+              "pass_accuracy": {
+                "numerator": 1,
+                "denominator": 2
+              },
+              "shot_accuracy": {
+                "numerator": 2,
+                "denominator": 2
+              }
+            },
+            "meadow": {
+              "pass_attempts": 1,
+              "passes_completed": 1,
+              "shots": 0,
+              "on_target": 0,
+              "goals": 0,
+              "tackles": 1,
+              "turnovers": 1,
+              "regains": 0,
+              "pressure": 0,
+              "pass_accuracy": {
+                "numerator": 1,
+                "denominator": 1
+              },
+              "shot_accuracy": null
+            }
+          },
+          "players": {
+            "harbor_7": {
+              "pass_attempts": 1,
+              "passes_completed": 1,
+              "shots": 1,
+              "on_target": 1,
+              "goals": 1,
+              "tackles": 0,
+              "turnovers": 0,
+              "regains": 0,
+              "pressure": 2,
+              "pass_accuracy": {
+                "numerator": 1,
+                "denominator": 1
+              },
+              "shot_accuracy": {
+                "numerator": 1,
+                "denominator": 1
+              }
+            },
+            "harbor_9": {
+              "pass_attempts": 1,
+              "passes_completed": 0,
+              "shots": 1,
+              "on_target": 1,
+              "goals": 0,
+              "tackles": 0,
+              "turnovers": 0,
+              "regains": 1,
+              "pressure": 1,
+              "pass_accuracy": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "shot_accuracy": {
+                "numerator": 1,
+                "denominator": 1
+              }
+            },
+            "meadow_4": {
+              "pass_attempts": 1,
+              "passes_completed": 1,
+              "shots": 0,
+              "on_target": 0,
+              "goals": 0,
+              "tackles": 0,
+              "turnovers": 1,
+              "regains": 0,
+              "pressure": 0,
+              "pass_accuracy": {
+                "numerator": 1,
+                "denominator": 1
+              },
+              "shot_accuracy": null
+            },
+            "meadow_8": {
+              "pass_attempts": 0,
+              "passes_completed": 0,
+              "shots": 0,
+              "on_target": 0,
+              "goals": 0,
+              "tackles": 1,
+              "turnovers": 0,
+              "regains": 0,
+              "pressure": 0,
+              "pass_accuracy": null,
+              "shot_accuracy": null
+            }
+          }
+        },
+        "window": {
+          "teams": {
+            "harbor": {
+              "pass_attempts": 2,
+              "passes_completed": 1,
+              "shots": 2,
+              "on_target": 2,
+              "goals": 1,
+              "tackles": 0,
+              "turnovers": 0,
+              "regains": 1,
+              "pressure": 3,
+              "pass_accuracy": {
+                "numerator": 1,
+                "denominator": 2
+              },
+              "shot_accuracy": {
+                "numerator": 2,
+                "denominator": 2
+              }
+            },
+            "meadow": {
+              "pass_attempts": 1,
+              "passes_completed": 1,
+              "shots": 0,
+              "on_target": 0,
+              "goals": 0,
+              "tackles": 1,
+              "turnovers": 1,
+              "regains": 0,
+              "pressure": 0,
+              "pass_accuracy": {
+                "numerator": 1,
+                "denominator": 1
+              },
+              "shot_accuracy": null
+            }
+          },
+          "players": {
+            "harbor_7": {
+              "pass_attempts": 1,
+              "passes_completed": 1,
+              "shots": 1,
+              "on_target": 1,
+              "goals": 1,
+              "tackles": 0,
+              "turnovers": 0,
+              "regains": 0,
+              "pressure": 2,
+              "pass_accuracy": {
+                "numerator": 1,
+                "denominator": 1
+              },
+              "shot_accuracy": {
+                "numerator": 1,
+                "denominator": 1
+              }
+            },
+            "harbor_9": {
+              "pass_attempts": 1,
+              "passes_completed": 0,
+              "shots": 1,
+              "on_target": 1,
+              "goals": 0,
+              "tackles": 0,
+              "turnovers": 0,
+              "regains": 1,
+              "pressure": 1,
+              "pass_accuracy": {
+                "numerator": 0,
+                "denominator": 1
+              },
+              "shot_accuracy": {
+                "numerator": 1,
+                "denominator": 1
+              }
+            },
+            "meadow_4": {
+              "pass_attempts": 1,
+              "passes_completed": 1,
+              "shots": 0,
+              "on_target": 0,
+              "goals": 0,
+              "tackles": 0,
+              "turnovers": 1,
+              "regains": 0,
+              "pressure": 0,
+              "pass_accuracy": {
+                "numerator": 1,
+                "denominator": 1
+              },
+              "shot_accuracy": null
+            },
+            "meadow_8": {
+              "pass_attempts": 0,
+              "passes_completed": 0,
+              "shots": 0,
+              "on_target": 0,
+              "goals": 0,
+              "tackles": 1,
+              "turnovers": 0,
+              "regains": 0,
+              "pressure": 0,
+              "pass_accuracy": null,
+              "shot_accuracy": null
+            }
+          }
+        }
+      },
+      "candidates": [
+        {
+          "candidate_id": "candidate_8582bbbf51a310ec42e3",
+          "explanation_type": "pressure_activity",
+          "team_id": "harbor",
+          "evidence_ids": [
+            "e004",
+            "e005",
+            "e006",
+            "e007"
+          ],
+          "metrics": {
+            "pressure_events": 3,
+            "regains": 1,
+            "window_start_ms": 0,
+            "window_end_ms": 50000
+          }
+        },
+        {
+          "candidate_id": "candidate_1c324d2700f64f848df0",
+          "explanation_type": "shot_volume",
+          "team_id": "harbor",
+          "evidence_ids": [
+            "e008",
+            "e010"
+          ],
+          "metrics": {
+            "shots": 2,
+            "on_target": 2,
+            "window_start_ms": 0,
+            "window_end_ms": 50000
+          }
+        }
+      ],
+      "state_digest": "9a5e3e1ae7ff4afe99a81a90c7448a0ae8b6fd0f661490d1244a0042f1c06655"
+    },
+    "visible_event_count": 11,
+    "provenance": {
+      "synthetic": true,
+      "source_id": "synthetic_match",
+      "evidence_ids": [
+        "meta",
+        "e001",
+        "e002",
+        "e003",
+        "e004",
+        "e005",
+        "e006",
+        "e007",
+        "e008",
+        "e009",
+        "e010"
+      ],
+      "evidence_records": [
+        {
+          "id": "meta",
+          "type": "metadata",
+          "at_ms": 0,
+          "match_id": "fictional_match_01",
+          "teams": [
+            {
+              "id": "harbor",
+              "name": "Harbor Owls"
+            },
+            {
+              "id": "meadow",
+              "name": "Meadow Foxes"
+            }
+          ],
+          "players": [
+            {
+              "id": "harbor_7",
+              "name": "Ari Vale",
+              "team_id": "harbor"
+            },
+            {
+              "id": "harbor_9",
+              "name": "Mika Reed",
+              "team_id": "harbor"
+            },
+            {
+              "id": "meadow_4",
+              "name": "Noa Ash",
+              "team_id": "meadow"
+            },
+            {
+              "id": "meadow_8",
+              "name": "Eli Moss",
+              "team_id": "meadow"
+            }
+          ]
+        },
+        {
+          "id": "e001",
+          "type": "pass",
+          "at_ms": 1000,
+          "team_id": "harbor",
+          "player_id": "harbor_7",
+          "success": true
+        },
+        {
+          "id": "e002",
+          "type": "pass",
+          "at_ms": 2000,
+          "team_id": "harbor",
+          "player_id": "harbor_9",
+          "success": false
+        },
+        {
+          "id": "e003",
+          "type": "pass",
+          "at_ms": 3000,
+          "team_id": "meadow",
+          "player_id": "meadow_4",
+          "success": true
+        },
+        {
+          "id": "e004",
+          "type": "pressure",
+          "at_ms": 10000,
+          "team_id": "harbor",
+          "player_id": "harbor_7"
+        },
+        {
+          "id": "e005",
+          "type": "pressure",
+          "at_ms": 20000,
+          "team_id": "harbor",
+          "player_id": "harbor_9"
+        },
+        {
+          "id": "e006",
+          "type": "pressure",
+          "at_ms": 30000,
+          "team_id": "harbor",
+          "player_id": "harbor_7"
+        },
+        {
+          "id": "e007",
+          "type": "turnover",
+          "at_ms": 35000,
+          "team_id": "meadow",
+          "player_id": "meadow_4",
+          "gained_by_team_id": "harbor",
+          "gained_by_player_id": "harbor_9"
+        },
+        {
+          "id": "e008",
+          "type": "shot",
+          "at_ms": 40000,
+          "team_id": "harbor",
+          "player_id": "harbor_9",
+          "on_target": true,
+          "goal": false
+        },
+        {
+          "id": "e009",
+          "type": "tackle",
+          "at_ms": 45000,
+          "team_id": "meadow",
+          "player_id": "meadow_8"
+        },
+        {
+          "id": "e010",
+          "type": "shot",
+          "at_ms": 50000,
+          "team_id": "harbor",
+          "player_id": "harbor_7",
+          "on_target": true,
+          "goal": true
+        }
+      ],
+      "event_revisions": {
+        "meta": 1,
+        "e001": 1,
+        "e002": 1,
+        "e003": 1,
+        "e004": 1,
+        "e005": 1,
+        "e006": 1,
+        "e007": 1,
+        "e008": 1,
+        "e009": 1,
+        "e010": 1
+      }
+    }
+  },
+  "model_job": {
+    "status": "accepted",
+    "injected": false,
+    "request_id": "0dbb7e896fb9424cb2fcc8f79bec8763",
+    "finished_at_ms": 1792510483599,
+    "result": {
+      "selection": {
+        "candidate_id": "candidate_1c324d2700f64f848df0",
+        "evidence_ids": [
+          "e008",
+          "e010"
+        ],
+        "explanation_type": "shot_volume"
+      },
+      "status": "selected",
+      "elapsed_ms": 10298.841,
+      "model_id": "gemma4:12b",
+      "endpoint": "http://127.0.0.1:11434",
+      "trace": [
+        {
+          "source": "Agent Framework agent middleware",
+          "event": "enter",
+          "agent_id": "touchline_candidate_selector",
+          "agent_class": "Agent"
+        },
+        {
+          "source": "Agent Framework chat middleware",
+          "event": "enter",
+          "client_class": "OllamaChatClient",
+          "stream": false
+        },
+        {
+          "source": "httpx transport",
+          "event": "request_dispatched",
+          "path": "/api/chat",
+          "request_sha256": "6d838addb4c8b35ef83331175bcc319eba369270c3c52007dd18518e7138e322"
+        },
+        {
+          "source": "httpx transport",
+          "event": "response_received",
+          "http_status": 200,
+          "bytes": 382
+        },
+        {
+          "source": "Agent Framework chat middleware",
+          "event": "completed",
+          "response_class": "ChatResponse"
+        },
+        {
+          "source": "Agent Framework agent middleware",
+          "event": "completed",
+          "response_class": "AgentResponse"
+        }
+      ],
+      "raw_response": "{\"candidate_id\": \"candidate_1c324d2700f64f848df0\"}",
+      "evidence_mode": "real local model",
+      "selection_mode": "candidate_id",
+      "think_requested": false,
+      "sdk_versions": {
+        "agent-framework-core": "1.22.0",
+        "agent-framework-ollama": "1.0.0b261015",
+        "ollama": "0.5.3"
+      },
+      "cleanup": {
+        "client_closed": true,
+        "transport_closed": true,
+        "server_cancellation": "not measured; no cancellation claim",
+        "response_closed": true,
+        "transport_task_cancelled": false
+      },
+      "candidate_context_sha256": "6acbdf709709006416c20b6450f159351c7965cd596b52a2e833f6598b73c4d3",
+      "model_context_sha256": "65fc6d77a444f3e7c6e1c3cf916683ca8102f7f0889a4f022ba191e55bf0938b",
+      "raw_response_truncated": false,
+      "server": {
+        "model": "gemma4:12b",
+        "done": true,
+        "done_reason": "stop",
+        "prompt_eval_count": 187,
+        "eval_count": 29,
+        "total_duration": 10083336700,
+        "load_duration": 6482588500
+      },
+      "request_sha256": "6d838addb4c8b35ef83331175bcc319eba369270c3c52007dd18518e7138e322",
+      "response_body_sha256": "af3ca7af57bb74a05dc0f849dedbd4c642a085fd16796bd1c4c415687cd79021",
+      "requests_dispatched": 1,
+      "budget": {
+        "attempts_started": 3,
+        "real_calls_started": 3,
+        "inflight": false,
+        "max_calls": 4,
+        "wall_spent_ms": 34748.969,
+        "wall_budget_ms": 50000,
+        "max_output_tokens": 48,
+        "client_timeout_ms": 12000,
+        "selection_mode": "candidate_id",
+        "think": false,
+        "retries": 0,
+        "evidence_mode": "real local model",
+        "enabled_until_ms": 1792512039000,
+        "cleanup_failed": false
+      }
+    }
+  },
+  "model_budget": {
+    "attempts_started": 3,
+    "real_calls_started": 3,
+    "inflight": false,
+    "max_calls": 4,
+    "wall_spent_ms": 34748.969,
+    "wall_budget_ms": 50000,
+    "max_output_tokens": 48,
+    "client_timeout_ms": 12000,
+    "selection_mode": "candidate_id",
+    "think": false,
+    "retries": 0,
+    "evidence_mode": "real local model",
+    "enabled_until_ms": 1792512039000,
+    "cleanup_failed": false
+  },
+  "history": [
+    {
+      "at_ms": 1792510460146,
+      "action": "reset"
+    },
+    {
+      "at_ms": 1792510472293,
+      "action": "pattern"
+    },
+    {
+      "at_ms": 1792510473297,
+      "action": "infer"
+    },
+    {
+      "at_ms": 1792510483599,
+      "action": "selection_result",
+      "status": "accepted",
+      "injected": false
+    }
+  ],
+  "audience": "casual",
+  "language": "en",
+  "model_available": true,
+  "real_model_calls": 3,
+  "model_limit": 4,
+  "position": 10,
+  "positions": 21
+}

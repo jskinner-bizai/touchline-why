@@ -1,0 +1,41 @@
+{
+  "scope": "Nonexecuting templates only",
+  "files": {
+    "aca.template.json": {
+      "bytes": 2390,
+      "sha256": "77136286d46f2d2c98b448211897b9e8c90296c334a7c753d0438522ae0c1300"
+    },
+    "APPROVAL_BOUNDARY.md": {
+      "bytes": 2875,
+      "sha256": "03348e50644cec22ac4d18a1ef6e6d88b22f7bb0ca9cfc23a6bf9346bc01face"
+    },
+    "DEPLOYMENT_COMMANDS.ps1.txt": {
+      "bytes": 5142,
+      "sha256": "288f86c2ba7d4ae6e7b3f63c6fe8892fac989a23b8086a219cf90e5a594da2f3"
+    },
+    "Dockerfile": {
+      "bytes": 886,
+      "sha256": "13468e478985aa81e6cc32933162d520af4b5dced214e9fcfe608b7ca9d623f2"
+    },
+    "Dockerfile.dockerignore": {
+      "bytes": 484,
+      "sha256": "27cf5b1e7a81f88df8270de4afacbccb3add81f30183681c8bb5c0ea5bf3cb15"
+    },
+    "HOSTING_PLAN.md": {
+      "bytes": 12233,
+      "sha256": "1c790f5fa91c0cb4b515d9fa68710ebe51855972f87d486902d006bff6fa46b3"
+    },
+    "READ_ONLY_METADATA_RECEIPT.json": {
+      "bytes": 276,
+      "sha256": "422f75e3d8b9603deb21ad2aa28136304fb69e722c39fe28fba78ddf0ccbf7bd"
+    },
+    "render_deploy_plan.py": {
+      "bytes": 3265,
+      "sha256": "88fc590e79db8a86a894b3c13ff01939c52c84988762293d07f7f88469f0d3a9"
+    },
+    "TEMPLATE_VALIDATION.json": {
+      "bytes": 257,
+      "sha256": "f81789bfdf98f2bdb5c7cfcd88cf4db3ab184e0ab65b1d39bba848a142607483"
+    }
+  }
+}

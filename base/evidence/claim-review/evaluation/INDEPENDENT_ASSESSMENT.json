@@ -1,0 +1,74 @@
+{
+  "assessment_type": "Read-only receipt and runner review, separate from implementation owner; assessor authored the frozen case capsule and evaluator",
+  "pilot_id": "actual-run-20261022-01",
+  "gate": "NO_GO",
+  "frozen_gate_changed": false,
+  "full_rubric_pass": {
+    "passed": 3,
+    "total": 4
+  },
+  "correct_clause_actions": {
+    "passed": 4,
+    "total": 4
+  },
+  "current_evidence_joins": {
+    "passed": 4,
+    "total": 4
+  },
+  "reason_classification": {
+    "passed": 3,
+    "total": 4
+  },
+  "failed_case": {
+    "id": "P04",
+    "actual_reason": "contradicted_fact",
+    "expected_reason": "stale_revision",
+    "correct_action": "revise; retain C2; drop stale goal C1; retain F_SHOTS only"
+  },
+  "execution": {
+    "real_chats": 4,
+    "health_gets": 2,
+    "subprocess_lifecycle_ms": [
+      22125,
+      10297,
+      7359,
+      15250
+    ],
+    "all_normal_exit_zero": true,
+    "all_server_done": true,
+    "all_client_transport_response_closed": true,
+    "all_actual_lifecycles_under_25000ms": true,
+    "output_tokens": [
+      25,
+      53,
+      30,
+      70
+    ],
+    "output_token_total": 178,
+    "whole_trial_ms": 55940,
+    "reserved_budget_ms": 100000,
+    "no_remaining_attempt_allowance": true,
+    "owned_daemon_started": false,
+    "timeouts_exercised": false,
+    "server_cancellation_proven": false
+  },
+  "receipt_checks": {
+    "raw_request_and_response_byte_hashes_match": true,
+    "untruncated_bytes": true,
+    "request_case_data_matches_frozen_inputs": true,
+    "gold_labels_absent_from_model_payload": true,
+    "raw_response_matches_reported_output": true,
+    "generic_schema_does_not_encode_case_specific_answers": true
+  },
+  "usefulness": "Correctly preserved supported noncanonical clauses and supplied specific diagnoses for P01-P03 beyond the safe exact-canonical baseline, which withheld all four drafts for manual review. P04 also preserved the correct clause but failed correction-specific diagnosis. This is task evidence, not measured producer benefit or a factual-accuracy advantage over an unsafe baseline.",
+  "limits": [
+    "Four fixed hand-picked cases, one trial, no general quality or latency claim.",
+    "Actual Microsoft Agent Framework model execution is evidenced; no integration into the judged application or fresh UI demonstration is evidenced.",
+    "Normal successful completions do not exercise timeout recovery or demonstrate server-side cancellation.",
+    "Outer watchdog deadline is not formally proved: process creation precedes the watchdog try/finally and close can wait up to five seconds after the nominal wait. Actual lifecycles did not overrun.",
+    "Potential new-daemon pre-job-assignment startup race was not exercised because the existing daemon was used.",
+    "No measured human usefulness, live application safety validation, or idle/GPU release proof."
+  ],
+  "next_action": "Keep frozen gate NO_GO; preserve all four receipts and labels. No retry, model call, integration or publication is authorized by this assessment.",
+  "assessor_operations": "Local file reads and new assessment files only; no endpoint, health, model, service, GPU or browser operations in this assessment."
+}
